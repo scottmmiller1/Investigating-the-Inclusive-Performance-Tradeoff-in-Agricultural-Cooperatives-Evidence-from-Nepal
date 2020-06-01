@@ -1,7 +1,7 @@
 %base packages 
 \documentclass[11pt]{article}
 \usepackage[margin=1in]{geometry}
-\usepackage{caption,multirow,etoolbox,color,enumerate,amsmath,dsfont,lscape,tocloft,booktabs,draftwatermark,array,tabularx,graphicx,pdflscape,subcaption}
+\usepackage{caption,multirow,etoolbox,color,enumerate,amsmath,dsfont,lscape,tocloft,booktabs,draftwatermark,array,tabularx,graphicx,pdflscape,subcaption,comment}
 \usepackage{setspace}
 \setlength{\parskip}{0em}
 \usepackage[bottom, flushmargin]{footmisc}
@@ -25,7 +25,7 @@
 \usepackage[hyperfootnotes=false]{hyperref}
 %\usepackage[dvipdfmx,hyperfootnotes=false]{hyperref}
 %\usepackage[dvips,hyperfootnotes=false]{hyperref}
-\hypersetup{colorlinks=true,linkcolor=blue,anchorcolor=blue,citecolor=blue,filecolor=blue,urlcolor=blue,bookmarksnumbered=true,pdfview=FitB} %
+\hypersetup{colorlinks=true,linkcolor=blue,anchorcolor=blue,citecolor=black,filecolor=blue,urlcolor=blue,bookmarksnumbered=true,pdfview=FitB} %
 % % %DO NOT PLACE ANY PACKAGES AFTER THE HYPERREF SET UP
 \usepackage{titling}
 
@@ -71,25 +71,31 @@
 
 %-----------------------------------------------------------------------%
 \section{Introduction} \label{sec:intro}
-% Hook
-Two-thirds of the world's poorest households live in rural areas and depend on agriculture for their livelihoods \citep{k_fuglie_harvesting_2019}. Tackling poverty, hunger and malnutrition require drastically increasing the production and commercialization of smallholder agricultural producers \citep{fischer_smallholder_2014,world_bank_world_2008}. Despite the important role that agriculture plays in reducing poverty \citep{k_fuglie_harvesting_2019}, rural markets in developing countries are often rife with constraints that limit the ability of smallholders to gain from formal markets \citep{ashby_investing_nodate,p_kristjanson_notitle_2014}. These constraints include poor infrastructure, weak communication channels and long distances between market actors that lead to high transaction costs, weak bargaining power and information asymmetry \citep{aker_information_2010,barrett_smallholder_2008,key_transactions_2000,staal_smallholder_1997}. 
 
-In the face of severe market constraints, %CM: ``market constraints'' sounds a bit odd. Perhaps constraints and/or market failures?
-agricultural cooperatives often arise in an effort to increase bargaining power, decrease transaction costs, and help achieve scale economies in marketing %CM: Perhaps say they can help with these problems rather than saying they arise because of them? Unless the latter is what your references say
-\citep{markelova_collective_2010,rondot_agricultural_2001,staal_smallholder_1997,csaki_reaching_2003}. By exploiting the potential of collective action, cooperatives provide the opportunity for smallholders to access markets that may otherwise be inaccessible, pool resources to overcome financial constraints, increase communication flows and collectively negotiate with buyers to receive better prices \citep{poole_review_2010}. However, cooperatives do not eliminate the source of market constraints. Rather, collective action shifts these burdens from individual market actors to the cooperatives themselves. The effectiveness of cooperatives in raising smallholder market engagement depends on how well cooperatives manage the challenge of internally coordinating sales among a large group of individual market actors \citep{mullally_impact_2020}. Evidence suggests that some farmer organizations are able to successfully overcome this challenge, generating large and inclusive benefits for their members \citep{narrod_publicprivate_2009,tadesse_mobile_2015,wollni_farmers_2007}. Others largely fail in this effort, resulting in weak market performance, heterogeneous benefits or dissolving participation among their members \citep{aflagah_cheap_2019,bernard_reaching_2009, casaburi_loyalty_2015}. 
+% Hook
+%Two-thirds of the world's poorest households live in rural areas and depend on agriculture for their livelihoods \citep{k_fuglie_harvesting_2019}. Tackling poverty, hunger and malnutrition require drastically increasing the production and commercialization of smallholder agricultural producers \citep{fischer_smallholder_2014,world_bank_world_2008}. Despite the important role that agriculture plays in reducing poverty \citep{k_fuglie_harvesting_2019}, rural markets in developing countries are often rife with constraints that limit the ability of smallholders to gain from formal output markets \citep{ashby_investing_2009,p_kristjanson_notitle_2014}. 
+
+%Cooperatives may contribute to rural development and poverty alleviation by increasing bargaining power, decreasing transaction costs, and helping smallholders achieve scale economies in marketing \citep{markelova_collective_2010,rondot_agricultural_2001,staal_smallholder_1997,csaki_reaching_2003}. However, there is a large disparity in cooperative performance in developing countries. Recent evidence shows that some cooperatives generate large and inclusive benefits for their members \citep{bachke_farmers_2019,tadesse_mobile_2015,wollni_farmers_2007}, while others demonstrate weak market performance, heterogeneous benefits or dissolving participation among their members \citep{bernard_reaching_2009, casaburi_loyalty_2015,fischer_smallholder_2014}. This disparity has generated a renewed interest among researchers and policymakers in understanding the factors that lead to the success and failure of cooperatives in low-income countries \citep{world_bank_world_2008}. 
+
+Rural markets in developing countries are often rife with constraints that limit the ability of smallholders to access and benefit from formal output markets \citep{barrett_smallholder_2008}. In these settings, agricultural cooperatives may contribute to rural development and poverty alleviation by increasing bargaining power, decreasing transaction costs, and helping smallholders achieve scale economies in marketing \citep{markelova_collective_2010,staal_smallholder_1997,csaki_reaching_2003}. However, evidence suggests that many farmer organizations struggle to reach their potential, often experiencing weak market performance, heterogeneous benefits, or dissolving participation among their members \citep{bernard_reaching_2009, casaburi_loyalty_2015,fischer_smallholder_2014}. This has generated a renewed interest among researchers and policymakers in understanding how to organize and manage successful cooperatives in low-income countries \citep{world_bank_world_2008}. 
+
+One aspect that has received considerable attention is the potential tradeoff between inclusive membership and market performance in agricultural cooperatives \citep{bernard_reaching_2009,world_bank_world_2008}. This relationship has been highlighted as an unresolved conflict, in which inclusive membership practices appear to damage market performance by increasing internal transaction and coordination costs \citep{berdegue_cooperating_2001,world_bank_world_2008}. Determining the extent of this tradeoff is essential to understanding the role that cooperatives play in alleivating poverty. However, studies on this topic have largely focused on cooperative membership as the source of inclusion, overlooking the extent to which existing members are included in group activities. This is an important distinction since cooperative members participate to varying degrees \citep{fischer_smallholder_2014}, and the number of members that are included in a given activity can improve the bargaining position of the cooperative \citep{aflagah_cheap_2019}.
+
+Prior studies argue that cooperatives with performance oriented membership rules are better able to reduce transaction costs and achieve higher levels of market performance \citep{berdegue_cooperating_2001,bernard_reaching_2009}. This issue has received considerable attention as these rules tend to exclude the most vulnerable households from receiving the benefits associated with cooperative membership \citep{world_bank_world_2008}. %CM: Be careful with how you word the next sentences. The Aflagh paper finds that having more members increases strategic uncertainty, making coordination less likely, does it not? I agree that more members raises the floor on bargaining power, however.
+Conversely, organizing bulk sales of members' output can be viewed as a critical mass coordination game, where a larger number of participants can improve the bargaining position of the cooperative by increasing the quantity of marketable output \citep{aflagah_cheap_2019}. Importantly, the marginal benefit of including an additional member in group activities is coupled with increasing transaction costs and strategic uncertainty, making coordination more difficult \citep{aflagah_cheap_2019}. Therefore the net benefits of including a larger proportion of cooperative members in a given activity is ambiguous and depends on how well the organization is able to manage coordination with larger group sizes. 
 
 % Question 
-One aspect that may contribute to this disparity is the relationship between inclusive membership and market performance in agricultural cooperatives. This relationship has been highlighted as an unresolved conflict in the cooperative literature, where organizations struggle to balance social inclusion with the challenge of coordinating activities among a diverse membership \citep{bernard_reaching_2009,world_bank_world_2008}. Determining the extent of this inclusive-performance tradeoff is essential to understanding the role that cooperatives play in agricultural development and poverty alleviation. Studies on this topic have largely focused on cooperative membership as the source of inclusion, overlooking the extent to which existing members are included in group activities. This distinction is central to the challenge faced by cooperatives. %CM Move this next sentence up so that we don't have to wait until the end of the paragraph to know why there might be a tradeoff
-Including a diverse membership may damage cooperative performance by increasing transaction costs \citep{world_bank_world_2008}, but including a large number of existing members in a given activity may improve performance by pooling a larger quantity of inputs \citep{aflagah_cheap_2019}. 
+In this paper, I examine the inclusive-performance tradeoff across two dimensions: extensive and intensive inclusion. The former describes the inclusion of a diverse set of households in a cooperative's membership, while the latter describes the extent to which existing members are included cooperative activities. First, I analyze the relationship between inclusive membership and market performance across the extensive and intensive dimensions. I then use the \citet{oaxaca_male-female_1973}-\citet{blinder_wage_1973} decomposition to determine whether these relationships are best explained by differences in observable characteristics or differences in the returns to those characteristics. 
+
+My population of interest are smallholder goat producers in rural Nepal, all of whom are women and members of agricultural cooperatives. The data used in this study cover 2,856 households across 108 smallholder livestock cooperatives in Nepal. This data set consists of two separate surveys - one with cooperative leaders and another with general members. The separate questionnaires for cooperative members and leaders provides a number of benefits for this study. The cooperative leader survey provides institutional information about each cooperative and its overall performance. The household survey collects detailed information on a sample of members from each cooperative, including their individual performance as a producer. The ability to link member-level data to overall cooperative performance provides a unique ability to analyze the relationship of interest, going beyond data aggregated at the cooperative-level or case studies of a small number of organizations. In particular, this data set allows me to analyze market performance at the individual-level, shedding light on the link between organizational management and the benefits that individual farmers receive from their cooperative. 
 
 % Antecedents
-Prior studies argue that cooperatives with performance oriented membership rules are better able to reduce the transaction costs associated with coordination and the management of group activities \citep{bernard_reaching_2009}. This issue has received considerable attention as these rules tend to exclude the most vulnerable households from receiving the benefits associated with cooperative membership \citep{world_bank_world_2008}. %CM: Be careful with how you word the next sentences. The Aflagh paper finds that having more members increases strategic uncertainty, making coordination less likely, does it not? I agree that more members raises the floor on bargaining power, however.
-Conversely, organizing bulk sales of members' output can be viewed as a critical mass coordination game, where a larger number of participants can improve the bargaining position of the cooperative by increasing the quantity of marketable output \citep{aflagah_cheap_2019}. If cooperatives are able to successfully manage the coordination challenge associated with increased group size, organizations that include a larger proportion of their membership in activities may be able to generate broader benefits. %CM: You've laid out why membership size may have an ambiguous relationship with cooperative performance. But what about your particular question, i.e. inclusiveness conditional on being a member? If you see the same arguments applying to the extensive (membership size) and intensive (inclusiveness conditional on membership) with regards to cooperative performance, that's fine. But you should make that point. I think it kind of comes down to what the shape of the MC and MB curves are. Does the latter go up with inclusiveness because of bargaining power? Is the former flat, U-shaped, half-U?
 
-% Value Added CM: to me this reads more like the ``question'' and should be moved above the previous paragraph.
-In this paper, I examine the inclusive-performance tradeoff across two dimensions: extensive and intensive inclusion. The former describes the inclusion of a diverse set of households in a cooperative's membership, while the latter describes the extent to which existing members are included cooperative activities. First, I analyze the relationship between inclusive membership and market performance across the extensive and intensive dimensions. I then use the \citet{oaxaca_male-female_1973}-\citet{blinder_wage_1973} decomposition to determine whether these relationships are best explained by differences in observable characteristics or differences in the returns to those characteristics. My population of interest are smallholder goat producers in rural Nepal, all of whom are women and members of agricultural cooperatives. The data used in this study covers 2,856 households across 108 smallholder livestock cooperatives in Nepal. 
+% Value added
+This study builds on the existing literature by expanding the definition of inclusive membership and providing new evidence on the inclusive-performance tradeoff. While previous studies have demonstrated a tradeoff between extensive inclusion and market performance \citep{berdegue_cooperating_2001,bernard_reaching_2009}, I argue that this is only one aspect of inclusiveness. Equating inclusion with group membership overlooks an important aspect of cooperative membership and management. Smallholders may be included in a cooperative's membership, but excluded from participating in many of the organization's activities. Cooperative managers have to decide how many members to include in various group activities, balancing the marginal benefits of more inputs with the marginal costs associated with managing larger groups. By providing a broader account of inclusive membership, this study provides new insights into the inclusive-performance tradeoff and the role of cooperatives in alleviating poverty.
 
-I find that cooperatives that include a larger proportion of illiterate and low asset holding farmers in their membership perform significantly worse than their less inclusive counterparts. While this result is consistent with the inclusive-performance tradeoff, I also find that cooperatives that include a larger proportion of their members in group activities perform better than their less inclusive counterparts. Both results are largely driven by differences in returns to the observable characteristics between the most and least inclusive cooperatives. This suggests that both extensive and intensive inclusion have a meaningful, but opposite, impact on a cooperative's ability to achieve market performance. Finally, my results indicate that these results are largely not explained by differences in observable characteristics between the two groups. %CM: Ok, so you do both dimensions of inclusiveness. That's great. I think my point above still stands though.  
+% Results
+My results suggest that extensive inclusion is associated with lower market performance, while intensive inclusion is associated with higher market performance. Specifically, I find that cooperatives that include a larger proportion of non-literate and low asset holding farmers in their membership perform significantly worse than their less inclusive counterparts. I also find that cooperatives that communicate with and award loans to a larger proportion of their members perform better than their less inclusive counterparts. Both results are largely driven by differences in returns to the observable characteristics between the most and least inclusive cooperatives. This suggests that both extensive and intensive inclusion have a meaningful, but opposite, impact on a cooperative's ability to achieve market performance. 
 
 %CM: What is your contribution? Why is a better descriptive account of the relationship between inclusiveness and performance important? Overall you have a lot of good pieces here but the intro needs work. I don't think you need a whole paragraph on ag and poverty. Some of what you have in the second paragraph might be a better fit for ``antecedents''. 
 
@@ -97,20 +103,20 @@ I find that cooperatives that include a larger proportion of illiterate and low 
 \section{Background} \label{sec:background}
 
 In Nepal, where 68 percent of the population depends on agriculture for their livelihood %CM: Maybe establish the context in the intro. Otherwise the intro of Heifer in the Background section is a little bit awkward
-\citep{international_labor_organization_ilo_2016}, goats are a common source of income and nutrition. This is particularly true in rural areas, where almost every household owns a least a few goats \citep{upreti_food_2009}. In recent years, urbanization and rising incomes have lead to a higher demand for goat meat, but a poorly functioning value chain has left smallholder producers, most of whom are women, unable to benefit \citep{ashby_investing_nodate,choudhary_pro-poor_2011,gurung_empowering_2015}. Smallholders face high transaction costs, weak bargaining power and a lack of communication infrastructure that limit their ability to access and gain from formal output markets \citep{ashby_investing_nodate,p_kristjanson_notitle_2014}. As a result, domestic production has been unable to keep up with rising demand, leading to higher imports from India and Tibet \citep{heifer_international_nepal_study_2012}.
+\citep{international_labor_organization_ilo_2016}, goats are a common source of income and nutrition. This is particularly true in rural areas, where almost every household owns a least a few goats \citep{upreti_food_2009}. In recent years, urbanization and rising incomes have lead to a higher demand for goat meat, but a poorly functioning value chain has left smallholder producers, most of whom are women, unable to benefit \citep{ashby_investing_2009,choudhary_pro-poor_2011,gurung_empowering_2015}. Smallholders face high transaction costs, weak bargaining power and a lack of communication infrastructure that limit their ability to access and gain from formal output markets \citep{barrett_smallholder_2008}. As a result, domestic production has been unable to keep up with rising demand, leading to higher imports from India and Tibet \citep{heifer_international_nepal_study_2012}.
 
 Many agricultural policy and rural development plans in Nepal have promoted agricultural cooperatives as a means of supporting smallholder producers \citep{agricultural_development_strategy_agricultural_2015}. Non-governmental organizations, including Heifer Project International in Nepal (HPIN), have made recent efforts to strengthen the goat value chain by organizing producer cooperatives. HPIN’s programs give women livestock and extensive training. Beneficiaries are then organized into self-help groups of around 20-30 female members. Once self-help groups in a given area are sufficiently organized, they are combined into larger producer cooperatives \citep{janzen_short-term_2018}.
 
-In Nepal, the majority of goats are consumed locally after sale to a local collector who pools animals from small producers, or to a local butcher \citep{heifer_international_nepal_study_2012}. For goats that are marketed outside their original communities, the commercial value chain links producers, local collectors, regional traders who pool animals purchased from collectors, processors and retailers, and finally consumers who are primarily located in urban markets like the Kathmandu Valley \citep{heifer_international_nepal_study_2012}. A collector looking to buy goats from smallholder producers who are not affiliated with a cooperative would likely have to conduct individual negotiations, sometimes making multiple visits per home \citep{heifer_international_nepal_study_2012, staal_smallholder_1997}. After agreeing to terms with producers, the collector would still have to coordinate transportation. Bargaining with many small producers and managing logistics may inflate transaction costs and dissuade collectors from dealing with smallholders. In contrast, a collector purchasing through a cooperative need only negotiate with a single entity and can leave sales coordination to cooperative managers. 
+The majority of goats in Nepal are sold to a local trader or butcher \citep{heifer_international_nepal_study_2012}. For goats that are marketed outside their original communities, the commercial value chain links producers, local and regional traders, processors and retailers to consumers who are primarily located in urban markets like the Kathmandu Valley \citep{heifer_international_nepal_study_2012}. A local trader looking to buy goats from smallholder producers who are not affiliated with a cooperative would likely have to conduct individual negotiations, sometimes making multiple visits per home \citep{heifer_international_nepal_study_2012, staal_smallholder_1997}. After agreeing to terms with producers, the collector would still have to coordinate transportation. Bargaining with many smallholders and managing logistics may inflate transaction costs and dissuade collectors from dealing with smallholders. In contrast, a trader purchasing through a cooperative need only negotiate with a single entity and can leave sales coordination to cooperative managers \citep{mullally_impact_2020}. 
 
-The cooperatives included in my data appear to struggle with coordinating goat sales in a way that is broadly inclusive of members. Although officers from 86\% cooperatives in my data stated that their organizations coordinated goat sales, only 35\% of households received information about a cooperative sale in the six-months prior to data collection. My baseline data suggest that these cooperatives largely communicate in person. Among the households that did receive price and sales information, half indicate that they did so by word of mouth, nearly 75\% indicated receiving this information through SHG meetings, while only 19\% did so by phone call and less than 1\% via short message service (SMS).
+The cooperatives included in the data appear to struggle with coordinating goat sales in a way that is broadly inclusive of members \citep{mullally_impact_2020}. Although officers from 86\% cooperatives in the sample stated that their organizations coordinated goat sales, only 35\% of households received information about a cooperative sale in the six-months prior to data collection. These cooperatives also appear to largely communicate in person. Among the households that did receive price and sales information, half indicate that they did so by word of mouth, nearly 75\% indicated receiving this information through SHG meetings, while only 19\% did so by phone call and less than 1\% via short message service (SMS).
 
-The failure to transmit information about sales could be the result of meeting infrequently, as nearly all households state that SHG meetings happen monthly or less while nearly two-thirds indicate that cooperative meetings take place every two months or less. Distance to meetings points could be a barrier to more frequent interactions, as cooperative members state that it takes approximately 90 minutes to travel to and from cooperative meetings, on average. Road quality, access to transportation, and distance between cooperative members were identified by 90\%, 93\%, and 83\% of cooperative leaders, respectively, as limiting communication.
+The failure to transmit information about sales could be the result of meeting infrequently, as nearly all households state that SHG meetings happen monthly or less while nearly two-thirds indicate that cooperative meetings take place every two months or less \citep{mullally_impact_2020}. Distance to meetings points could be a barrier to more frequent interactions, as cooperative members state that it takes approximately 90 minutes to travel to and from cooperative meetings, on average. Road quality, access to transportation, and distance between cooperative members were identified by 90\%, 93\%, and 83\% of cooperative leaders, respectively, as limiting communication.
 
-The difficulties associated with word-of-mouth communication emphasize the transaction costs associated with including new members in the cooperative as well as existing members in group activities. Given that cooperatives average about 500 members each, calling all members or confirming that all receive a text message may seem more onerous than holding a meeting. This issue may directly affect market performance if cooperatives are failing to consider the entire inventory at their disposal by not including a large proportion of members in group sales. 
+The difficulties associated with word-of-mouth communication emphasize the transaction costs associated with including new members in the cooperative as well as existing members in group activities. Given that cooperatives average about 500 members each, calling all members or confirming that all receive a text message may seem more onerous than holding a meeting \citep{mullally_impact_2020}. This issue may directly affect market performance if cooperatives are failing to consider the entire inventory at their disposal by not including a large proportion of members in group sales. 
 
 %-----------------------------------------------------------------------%
-\section{Data} \label{sec:data}
+\section{Data \& Summary Statistics} \label{sec:data}
 In this paper I use a cross-sectional dataset covering 2,856 goat producing households across 108 female smallholder livestock cooperatives in Nepal. The cooperatives in this sample are spread across four of five development regions in Nepal, specifically the East, Central, West and Mid-Western Development regions. All cooperatives operate in either the low-land Terai or mid-Hills. Figure (\ref{map}) shows the study area covered in the sample, which includes cooperatives from 24 districts across Nepal. The cooperatives included in the study were selected by HPIN and include all existing livestock marketing cooperatives the organization helped form prior to 2017.
 
 \begin{figure}[!h]
@@ -120,8 +126,7 @@ In this paper I use a cross-sectional dataset covering 2,856 goat producing hous
 \end{figure}
 
 This dataset consists of two separate surveys - one with cooperative leaders and another with general members.  %CM: If this feature of our data is unique in the co-op literature, you could emphasize it a bit more in the intro.
-I refer to these surveys as the cooperative leader and household survey, respectively. The cooperative leader survey is comprised of interviews from three officers in each cooperative. To obtain a representative sample for the household survey, HPIN and cooperative leaders generated complete cooperative rosters. From these comprehensive lists, a random sample of 2,856 households across 108 %CM: or 109?
-cooperatives was drawn to participate in the household survey. The data were collected from the sample in January 2018 using Android tablets and Open Data Kit.
+I refer to these surveys as the cooperative leader and household survey, respectively. The cooperative leader survey is comprised of interviews from three officers in each cooperative. To obtain a representative sample for the household survey, HPIN and cooperative leaders generated complete cooperative rosters. From these comprehensive lists, a random sample of members from each cooperative was drawn to participate in the household survey. The data were collected from the sample in January 2018 using Android tablets and Open Data Kit.
 
 \singlespacing
 % Summary Stats Table
@@ -168,8 +173,7 @@ Annual revenue per goat (USD) & 2,856.00 & 41.91 & 53.56 & 0.00 & 742.50\\
 \end{table}
 \doublespacing
 
-Table (\ref{table:E1_summary}) provides summary statistics from the data set. The average cooperative in my sample has 569 members, and a revenue of over \$3,800 USD. While 93\% of cooperatives have an initial membership fee, the average cooperative charges \$2.22 USD. At the last general assembly meeting prior to data collection, only 64\% of members were in attendance, on average. At the household level, the average cooperative member is 42 years old, roughly 80\% of whom are literate. The average member has been a member of their cooperative for 3 years. On average, members have attended more than five self-help group meetings in the 6-months prior to data collection and attended fewer than two cooperative meetings over this period. Members indicate an average round-trip travel time to the cooperative of more than 90 minutes. %CM: did you winsorize this? Just make sure it isn't drive by outliers.
-While nearly 70\% of members indicate that they participate in the cooperative's general meeting, fewer than 10\% have voted in cooperative elections in the last 2-4 years. Roughly 35\% of members were contacted about cooperative organized livestock sales in the 6-months prior to data collection and 38\% were contacted about non-sale related cooperative activities. 
+Table (\ref{table:E1_summary}) provides summary statistics from the data set. The average cooperative in this context has 569 members, and a revenue of over \$3,800 USD. While 93\% of cooperatives have an initial membership fee, the average cooperative charges \$2.22 USD. At the last general assembly meeting prior to data collection, an average of 64\% of members were in attendance. At the household level, the average cooperative member is 42 years old, roughly 80\% of whom are literate. The average household has been a member of their cooperative for 3 years. On average, members have attended more than five self-help group meetings in the 6-months prior to data collection and attended fewer than two cooperative meetings over this period. Members indicate an average round-trip travel time to the cooperative of more than 90 minutes. While nearly 70\% of members indicate that they participate in the cooperative's general meeting, fewer than 10\% have voted in cooperative elections in the last 2-4 years. Roughly 35\% of members were contacted about cooperative organized livestock sales in the 6-months prior to data collection and 38\% were contacted about non-sale related cooperative activities. 
 %CM: depending on how it features in your later analysis, you might put something about savings or credit in the individual summary stats.
 
 \singlespacing
@@ -207,11 +211,52 @@ Sell pesticide (0/1) & 0.03 & 0.07 & 0.46\\
 \end{table}
 \doublespacing
 
-Table (\ref{table:E1_services}) displays the various services that cooperatives offer in this context. The first column indicates the proportion of cooperatives that offer each service, the second column displays the proportion of members that believe their cooperative offers that service and the last column indicates the proportion of members using a given service in the cooperatives that offer it. The most common services offered by the cooperatives in my sample are accepting savings deposits (97\%), offering loans to members (91\%), providing goat price information (87\%) and coordinating goat sales with traders (86\%). Among the sample of cooperative members, there is a large disparity in awareness and participation between the various services. While almost all members are aware of and save money through the cooperative, only 14\% of members sold at least one goat through the cooperative in the year prior to data collection and a third of members had an outstanding loan from the cooperative at the time of data collection.
+Table (\ref{table:E1_services}) displays the various services that cooperatives offer in this context. The first column indicates the proportion of cooperatives that offer each service, the second column displays the proportion of members that are aware that the service is offered and the last column indicates the proportion of members using that service in the cooperatives that offer it. The most common services offered by the cooperatives in my sample are accepting savings deposits (97\%), offering loans to members (91\%), providing goat price information (87\%) and coordinating goat sales with traders (86\%). Among the sample of cooperative members, there is a large disparity in awareness and participation between the various services. While almost all members are aware of and save money through the cooperative, only 14\% of members sold at least one goat through the cooperative in the year prior to data collection and a third of members had an outstanding loan from the cooperative at the time of data collection.
 
+
+Table (\ref{table:E1_inclusion}) displays the relationship between members' characteristics and the extent to which they are included in cooperative activities. Columns 1-4 report the results of logit regressions on each of the following binary indicators of inclusion: whether the member currently holds a leadership role in the cooperative, whether the member received information about a cooperative organized goat sale in the last year, whether the member received information about a cooperative organized activity other than a sale in the last year, whether the member voted in cooperative elections in the last 2-4 years and whether the household currently has a loan outstanding from the cooperative. 
+
+\singlespacing
+% Summary Stats Table
+\newcolumntype{Y}{>{\centering\arraybackslash}X}
+\begin{table}[H]
+  \centering
+  \caption{Determinants of inclusion (logit: average marginal effects)}
+  \label{table:E1_inclusion}
+  \scalebox{.65}{
+  \begin{tabularx}{1.45\linewidth}{llllll} \hline
+ & (1) & (2) & (3) & (4) & (5) \\
+Variables & Leadership & Received sale & Received non-sale & Voted in & Received \\
+ & role (0/1) & information (0/1) & information (0/1) & election (0/1) & loan (0/1) \\
+\hline
+ &  &  &  &  &  \\
+Literacy (0/1) & 2.295*** & 0.473*** & 0.522*** & 0.165 & 0.239** \\
+ & (0.397) & (0.104) & (0.100) & (0.169) & (0.107) \\
+Age (years) & -0.002 & -0.014*** & -0.004 & -0.016** & -0.017*** \\
+ & (0.008) & (0.004) & (0.004) & (0.007) & (0.004) \\
+Number of household members (count) & -0.060* & 0.035** & -0.006 & -0.022 & -0.021 \\
+ & (0.035) & (0.015) & (0.015) & (0.027) & (0.017) \\
+Total number of goats owned (count) & 0.028** & 0.061*** & 0.020** & 0.016 & 0.009 \\
+ & (0.013) & (0.009) & (0.008) & (0.013) & (0.009) \\
+Length of membership (years) & -0.191*** & -0.133*** & -0.000 & 0.197*** & 0.094*** \\
+ & (0.047) & (0.024) & (0.022) & (0.033) & (0.023) \\
+Round-trip travel time to cooperative meetings (minutes) & 0.001** & -0.002*** & -0.002*** & -0.002** & -0.002*** \\
+ & (0.001) & (0.000) & (0.000) & (0.001) & (0.000) \\
+Number of cooperative members (count) & -0.001*** & 0.001*** & 0.000 & 0.000 & -0.000 \\
+ & (0.000) & (0.000) & (0.000) & (0.000) & (0.000) \\
+ &  &  &  &  &  \\
+ Observations & 2,829 & 2,829 & 2,829 & 2,829 & 2,829 \\ \hline
+\multicolumn{6}{@{}p{1.45\linewidth}}
+{\textit{Notes}: Results from a logit regression, reporting the average marginal effects for the sample. Standard errors in parentheses (*** p$<$0.01, ** p$<$0.05, * p$<$0.1). }
+  \end{tabularx}}
+\end{table}
+\doublespacing
+
+%CM no need to show the constant when presenting marginal effects. Also, it is probably better to show AMEs over the sample rather than at the mean.
+These results indicate that cooperatives may be including members to different degrees based on their characteristics. Literate cooperative members are significantly more likely to hold a leadership role, to have received sale and non-sale information from the cooperative, and to have an outstanding loan from the cooperative. Interestingly, older members are significantly less likely to be included across three of the five outcomes. Members who own a larger number of goats are significantly more likely to hold a leadership role and receive information regarding cooperative sales and activities. Although those that have been members of the cooperative longer are less likely to be in a leadership role or to receive sale information, they are more likely to have voted in cooperative elections and have a loan outstanding. Additionally, members who live farther away from the cooperative are significantly less likely to be included across four of the five outcomes.  
 
 %-----------------------------------------------------------------------%
-\section{Empirical Strategy} \label{sec:E1_emp}
+\section{Methodology} \label{sec:E1_emp}
 
 %-----------------------------------------------------------------------%
 \subsection{Theoretical Framework} \label{sec:E1_theory}
@@ -225,7 +270,7 @@ For example, suppose that the relationship between the outcome for farmer $i$, $
 \end{equation}  
 
 %CM: Be clear what \beta is. 
-Given that the most and least inclusive cooperatives likely differ in their ability to translate members' characteristics into performance, I will allow for different values of $\beta$ for each group. Using the group-specific parameters, the difference between average outcomes for the most and least inclusive cooperatives is written as:
+Given that the most and least inclusive cooperatives likely differ in their ability to translate members' characteristics into performance, I allow for different values of $\beta$ for each group. Using group-specific parameters, the difference between average outcomes for the most and least inclusive cooperatives is written as:
 
 \begin{equation} \label{eq:E1_2}
         \overline{Y}_{m} - \overline{Y}_{\ell} =  \beta_{m}\overline{\mathbf{X}}_{m} - \beta_{\ell}\overline{\mathbf{X}}_{\ell}
@@ -241,8 +286,25 @@ where $m$ and $\ell$ represent the most and least inclusive cooperatives, respec
 \end{subequations}  
 
 %Cm: I think 4.1 and 4.2 could be condensed into one subsection.
-Here, (\ref{eq:E1_3b}) is the explained component (weighted by the coefficients for producers in the least inclusive cooperatives), which is the difference between the average outcomes that producers in the least inclusive cooperatives actually receive, given their characteristics, and what they could receive if their characteristics matched those of producers in the most inclusive cooperatives. %CM: Importantly, this interpretation holds regardless of whether the conditional mean is linear in parameters, because the regression line always go through the sample average (Ybar and Xbar). In other words, not only do you not have to identify a causal effect, you also don't need a linear conditional mean for this decomposition to be useful.
-Line (\ref{eq:E1_3c}) is the unexplained component (weighted by the characteristics of producers in the most inclusive cooperatives), which is the difference between what producers in the most inclusive cooperatives actually receive and what they would receive if they had equivalent returns to their characteristics as those in the least inclusive cooperatives.
+Here, (\ref{eq:E1_3b}) is the explained component (weighted by the coefficients for producers in the least inclusive cooperatives), which is the difference between the average outcomes that producers in the least inclusive cooperatives receive, given their characteristics, and the expected outcome they would receive if their characteristics matched those of producers in the most inclusive cooperatives. %CM: Importantly, this interpretation holds regardless of whether the conditional mean is linear in parameters, because the regression line always go through the sample average (Ybar and Xbar). In other words, not only do you not have to identify a causal effect, you also don't need a linear conditional mean for this decomposition to be useful.
+Line (\ref{eq:E1_3c}) is the unexplained component (weighted by the characteristics of producers in the most inclusive cooperatives), which is the difference between what producers in the most inclusive cooperatives receive and the expected outcome these producers would receive if they had equivalent returns to their characteristics as those in the least inclusive cooperatives. Importantly, this interpretation does not require any assumptions of a causal effect or a model that is linear in parameters. Given that that the regression line runs through $\overline{Y}$ and $\overline{\mathbf{X}}$ by definition, this interpretation holds without onerous assumptions. 
+
+%-----------------------------------------------------------------------%
+\subsection{Group Definitions and Outcomes}
+
+In this subsection I describe how I will split cooperatives into the most and least inclusive groups and define each outcome used in my analysis. First, I define inclusive membership based on four criteria for allowing a diverse membership to participate in the cooperative (extensive inclusion): the proportion of nonliterate members in each cooperative, the proportion of members who own fewer than the sample median number of goats, the coefficient of variation on goats owned per member and the size of the cooperative membership fee. I then define inclusive membership based on four criteria for the extent to which existing members are included in group activities (intensive inclusion): the proportion of members receiving information about a cooperative organized goat sale, the proportion of members receiving information about a cooperative organized activity other than a sale, the proportion of members that currently have an outstanding loan from the cooperative and the proportion of members that voted in cooperative elections in the last 2-4 years.
+
+For extensive inclusion, I split cooperatives into the most and least inclusive groups across each of the extensive criteria as well as a summary index of all four variables, creating five separate group splits. To sort cooperatives along each dimension, I calculate the median value of each variable described above, splitting cooperatives above the median value into the most inclusive group and those at or below the median into the least inclusive group (for the size of cooperative membership fee, those above the median value are placed into the least inclusive group and those at or below the median are placed into the most inclusive group). I then create the extensive summary index by calculating the first principle component score across the four extensive criteria and splitting this index at its median value.\footnote{The size of the cooperative membership fee is multiplied by -1 before calculating the principle component score. This ensures that a higher membership fee is associated with a lower first principle component score.} Cooperatives that have an extensive index score above the median value are placed into the most inclusive group and those at or below the median are placed into the least inclusive group. I follow the same process for intensive inclusion, creating four additional group splits and one intensive summary index group split. I calculate the median value of each statistic and place cooperatives that are above the median value into the most inclusive group and those at or below the median into the least inclusive group. I then create the intensive summary index by calculating first principle component score across the four intensive criteria, splitting this index at its median value and placing those above the median into the most inclusive group.
+%CM: If and when we do our follow-up, it seems like we should ask about criteria for becoming a member.
+
+Each group split is intended to capture an important aspect of inclusive membership. In terms of extensive inclusion, literacy, members' assets and membership fees are all highly relevant sources of inclusion for smallholder producers. Including nonliterate producers or those with very few assets in a cooperative's membership can help increase the production and commercialization of these vulnerable producers \citep{poole_review_2010}, but likely increases management costs and requires these individuals to be subsidized by more productive members \citep{world_bank_world_2008}. Similarly, high membership fees may be prohibitive for the most vulnerable households, but can increase revenue and reduce the number of members who are not fully engaged. \citet{bachke_farmers_2019} argues that a high presence of nonliterate members and low membership fees likely add to the organizational challenges faced by cooperatives in Mozambique. Similarly,  \citet{bernard_reaching_2009} demonstrate that literacy and the quantity of livestock owned by the individual are important determinants of cooperative membership in Ethiopia.
+
+For intensive inclusion, the proportion of cooperative members that receive information about group sales and activities, have a cooperative loan outstanding or voted in recent cooperative elections describe crucial aspects of how members are included in an organization's activities. Communicating sale and non-sale information to a larger number of members likely increases participation in a given activity. When a larger number of members participate in cooperative activities, the organization's bargaining power increases by pooling more inputs \citep{aflagah_cheap_2019}. However, contacting a large number of members is costly for cooperative leaders in the absence of a streamlined communication platform. Additionally, transaction costs increase as the number of participating members increases, making coordination among larger groups more difficult \citep{aflagah_cheap_2019}. The share of cooperative members that currently have a loan outstanding is also a source of inclusion, and may affect the cooperative's performance. If cooperatives are only awarding loans to a small number of trustworthy members, the cooperative's investments would be safe, but would prevent many vulnerable members from accessing an important cooperative service. Conversely, lending to a large number of members who are credit constrained or not creditworthy would be risky for the cooperative. Deciding how to balance the cooperative's lending portfolio is a challenging task for cooperative managers. Finally, \citet{bernard_reaching_2009} argue that decision-making within cooperatives is often concentrated to management committees that are not inclusive of the poorest members of the cooperative. This makes the share of members that vote in cooperative elections an important indicator of how well represented the most vulnerable members are in the organization. 
+
+%CM: You'll have to explain why you picked these. Also, consider doing a split using a summary inclusion measure for each type of inclusion, e.g. first component of a principal components decomposition (not with the splits but with the raw variables used for the splits, then split the index at the median).
+
+The outcomes of interest in this study are defined as follows: the revenue received by each member from selling goats through the cooperative, the number of goats sold by each member through the cooperative, the value of outstanding cooperative loans that each member holds and a cooperative benefits index.\footnote{For cooperative goat revenue and the number of cooperative goats sold, I include only members who sold at least one goat in the year prior to data collection. As listed in table (\ref{table:E1_summary}), 48\% of all members sold at least one goat during this period. Among this subsample, 26\% sold at least one goat through the cooperative. Members who sold goats but did not sell through the cooperative have a value of zero for both variables. Therefore, the outcomes for these variables should be viewed as the outcome among goat-selling members.} The cooperative benefits index is an inverse covariance weighted index of the three outcome variables described above, following the apporach outlined in \citet{anderson_multiple_2008}. Measuring cooperative performance at the individual-level is intended to capture the aspects of performance that most directly benefit cooperative members. As shown in table (\ref{table:E1_services}), offering loans and assisting members with goat sales consist of three of the four most common services offered by cooperatives in this context (in addition to accepting savings deposits, a service for which I have limited data on). Interestingly, these services appear to be used infrequently, perhaps due to differing levels of extensive and intensive inclusion across cooperatives. Analyzing the relationship between inclusive membership and each of these services seeks to better understand how cooperative organization and management translates to benefits for individual members. 
+
 
 %-----------------------------------------------------------------------%
 \subsection{Estimating the Oaxaca Decomposition} \label{sec:E1_est}
@@ -253,7 +315,8 @@ An important aspect of this analysis is determining whether the performance gap 
    Y_{ij} = \mathbf{X}_i^{\prime}\beta + \mathbf{Z}_j^{\prime}\gamma + \varepsilon_{ij}
 \end{equation}  
 
-where $Y_{ij}$ is the outcome of interest for individual $i$ who is a member of cooperative $j$, $\mathbf{X}_i$ is a vector of individual attributes and $\mathbf{Z}_j$ is a vector of institutional attributes. Additionally, I include a district dummy to account for location-specific effects and cluster $\varepsilon_{ij}$ at the cooperative level. %CM you should motivate the inclusion of fixed effects better than this. 
+where $Y_{ij}$ is the outcome of interest for individual $i$ who is a member of cooperative $j$, $\mathbf{X}_i$ is a vector of individual attributes and $\mathbf{Z}_j$ is a vector of institutional attributes. Additionally, I include a district dummy to account for location-specific effects and cluster $\varepsilon_{ij}$ at the cooperative level. Since the cooperatives in my sample are spread across 24 districts in Nepal, it is possible that goat sales and loans could significantly vary across locations. A number of cooperatives are located in districts that are in close proximity to major urban markets, such as Kathmandu, while others are in mountainous terrains. Smallholders who live close to a major urban market may be able to sell a larger quantity of goats due to this close proximity, while smallholders who live in mountainous areas may receive less revenue due to the difficulty of transporting goats in that setting. A similar logic applies to the value of cooperative loans. Members in different locations likely have varying access to and demand for credit, potentially affecting the frequency and amount that they borrow from the cooperative. Therefore, including district fixed effects in my estimation will account for these geographic differences. Additionally, since I am estimating equation (\ref{eq:E1_4}) at the individual-level, $\varepsilon_{ij}$ is likely correlated within cooperatives, requiring clustered standard errors. 
+
 Allowing for the most and least inclusive cooperatives to differ in their ability to translate individual and institutional attributes into market performance, equation (\ref{eq:E1_2}) becomes
 
 \begin{equation} \label{eq:E1_5}
@@ -276,64 +339,10 @@ Equation (\ref{eq:E1_6c}) is the unexplained component (weighted by the individu
 %-----------------------------------------------------------------------%
 \section{Results}
 
-\subsection{Determinants of Intensive Inclusion}
+\subsection{Average Performance Gaps}
 
-Table (\ref{table:E1_inclusion}) displays the relationship between members' characteristics and the extent to which they are included in cooperative activities. Columns 1-4 report the results of logit regressions on each of the following binary indicators of inclusion: whether the member currently holds a leadership role in the cooperative, whether the member received information about a cooperative organized goat sale in the last year, whether the member received information about a cooperative organized activity other than a sale in the last year, whether the member voted in cooperative elections in the last 2-4 years and whether the household currently has a loan outstanding from the cooperative. 
-
-\singlespacing
-% Summary Stats Table
-\newcolumntype{Y}{>{\centering\arraybackslash}X}
-\begin{table}[H]
-  \centering
-  \caption{Determinants of inclusion (logit: marginal effect at mean of independent variable)}
-  \label{table:E1_inclusion}
-  \scalebox{.65}{
-  \begin{tabularx}{1.45\linewidth}{llllll} \hline
- & (1) & (2) & (3) & (4) & (5) \\
-Variables & Leadership & Received sale & Received non-sale & Voted in & Received \\
- & role (0/1) & information (0/1) & information (0/1) & election (0/1) & loan (0/1) \\
-\hline
- &  &  &  &  &  \\
-Literacy (0/1) & 2.304*** & 0.479*** & 0.508*** & 0.174 & 0.204* \\
- & (0.397) & (0.104) & (0.099) & (0.170) & (0.110) \\
-Age (years) & -0.002 & -0.013*** & -0.004 & -0.016** & -0.015*** \\
- & (0.008) & (0.004) & (0.004) & (0.007) & (0.004) \\
-Number of household members (count) & -0.060* & 0.034** & -0.007 & -0.022 & -0.009 \\
- & (0.035) & (0.015) & (0.015) & (0.027) & (0.017) \\
-Total number of goats owned (count) & 0.029** & 0.061*** & 0.021** & 0.016 & 0.006 \\
- & (0.013) & (0.009) & (0.008) & (0.013) & (0.010) \\
-Length of membership (years) & -0.190*** & -0.133*** & 0.000 & 0.197*** & 0.095*** \\
- & (0.047) & (0.024) & (0.022) & (0.033) & (0.024) \\
-Round-trip travel time to cooperative meetings (minutes) & 0.001** & -0.002*** & -0.002*** & -0.002** & -0.002*** \\
- & (0.001) & (0.000) & (0.000) & (0.001) & (0.000) \\
-Number of cooperative members (count) & -0.001*** & 0.001*** & 0.000 & 0.000 & 0.000 \\
- & (0.000) & (0.000) & (0.000) & (0.000) & (0.000) \\
-Constant & -3.429*** & -0.795*** & -0.601** & -2.237*** & -0.588** \\
- & (0.597) & (0.246) & (0.237) & (0.402) & (0.265) \\
- &  &  &  &  &  \\
- Observations & 2,829 & 2,829 & 2,829 & 2,829 & 2,829 \\ \hline
-\multicolumn{6}{@{}p{1.45\linewidth}}
-{\textit{Notes}: Results from a logit regression, reporting the marginal effects at the mean of each independent variable. Standard errors in parentheses (*** p$<$0.01, ** p$<$0.05, * p$<$0.1). }
-  \end{tabularx}}
-\end{table}
-\doublespacing
-
-%CM no need to show the constant when presenting marginal effects. Also, it is probably better to show AMEs over the sample rather than at the mean.
-These results indicate that cooperatives may be including members to different degrees based on their characteristics. Literate cooperative members are significantly more likely to hold a leadership role, to have received sale and non-sale information from the cooperative, and to have an outstanding loan from the cooperative. Interestingly, older members are significantly less likely to be included across four of the five outcomes, with the exception being the receipt of information about non-sale activities. Members who own a larger number of goats are significantly more likely to hold a leadership role and receive information regarding cooperative sales and activities. Although those that have been members of the cooperative longer are less likely to be in a leadership role or to receive sale information, these members are more likely to have voted in cooperative elections and more likely to have a loan from the cooperative. Additionally, members who live farther away from the cooperative are significantly less likely to be included across four of the five outcomes.  
-
-
-\subsection{Group Definitions}
-
-In this subsection I describe how I split cooperatives into the most and least inclusive groups and present the average performance gap along each outcome used in my analysis. First, I define inclusive membership based on four criteria for allowing a diverse membership to participate in the cooperative (extensive inclusion): literacy, the proportion of members who own fewer than the sample median number of goats, the coefficient of variation on goats owned per member and the size of the cooperative membership fee. I split cooperatives into the most and least inclusive group across each of these criteria, creating four separate group splits. To sort cooperatives along the literacy dimension, I calculate the proportion of members in each cooperative that are nonliterate and split this variable at the median value. Cooperatives whose proportion of nonliterate members is above the sample median are placed into the `most inclusive' group and those at or below the median proportion are placed into the `least inclusive' group for this criteria. For the proportion of members below the median number of goats owned, I calculate the median number of goats owned for the full sample and the proportion of each cooperative's members that own fewer than this number of goats. I then split this variable at the median value, sorting cooperatives that are above the median into the most inclusive group and those at or below the median into the least inclusive group, creating the second extensive inclusion split. I also calculate the coefficient of variation on the number of goats owned per member within each cooperative and split cooperatives at the median value of this statistic, with those above the median value and those at or below the median value placed into the most and least inclusive groups, respectively. Finally, I split cooperatives based on the size of the membership fee required to join the cooperative, sorting those with a membership fee below the median value into the most inclusive group and those at or above the median value into the least inclusive group. 
-%CM: If and when we do our follow-up, it seems like we should ask about criteria for becoming a member.
-
-I then define inclusive membership based on the extent to which existing members are included in various group activities (intensive inclusion). I split cooperatives at the median value of: the proportion of members receiving information about a cooperative organized goat sale, the proportion of members receiving information about a cooperative organized activity other than a sale, the proportion of members that currently have an outstanding loan from the cooperative and the proportion of members that voted in cooperative elections in the last 2-4 years. Across each dimension, I follow the same process described above, sorting cooperatives above the median value of each statistic into the most inclusive group, and those at or below the median value into the least inclusive group, creating four separate intensive inclusion group splits.
-%CM: You'll have to explain why you picked these. Also, consider doing a split using a summary inclusion measure for each type of inclusion, e.g. first component of a principal components decomposition (not with the splits but with the raw variables used for the splits, then split the index at the median).
-
-\subsection{Outcomes and Performance Gaps}
 %CM: give the units for the index impacts (standard deviations, right?)
-
-The outcomes of interest in this study are defined as follows: the revenue received by each member from selling goats through the cooperative, the number of goats sold by each member through the cooperative, the value of outstanding cooperative loans that each member holds and a cooperative benefits index.\footnote{For cooperative goat revenue and the number of cooperative goats sold, I include only members who sold at least one goat in the year prior to data collection. As listed in table (\ref{table:E1_summary}), 48\% of all members sold at least one goat during this period. Among this subsample, XX\% sold at least one goat through the cooperative. Members who sold goats but did not sell through the cooperative have a value of zero for both variables. Therefore, the outcomes for these variables should be viewed as the outcome among goat-selling members.} The cooperative benefits index is an inverse covariance weighted index of the three outcome variables described above, following the apporach outlined in \citet{anderson_multiple_2008}.
+Table (\ref{table:E1_gap}) displays the average performance gap between the most and least inclusive cooperatives across each of the ten group splits and outcomes described above. The first panel indicates that across two of the four extensive dimensions, cooperatives that broadly include people in their membership perform significantly worse than their less inclusive counterparts. Among the cooperatives whose proportion of nonliterate members is above the sample median, members sell significantly fewer goats through the cooperative and receive a significantly lower score on the cooperative benefits index. Similarly, among cooperatives whose proportion of low asset holding members is higher than the median value, members sell fewer goats through the cooperative, receive less revenue from goat sales and score significantly lower on the overall benefits index, on average. Interestingly, there are no significant differences between the most and least inclusive cooperatives when split at the median value of the coefficient of variation on the number of goats owned. This may imply that the overall variation of members' assets is less important than the proportion of members with very few assets. Similarly, there is no significant performance gap between the groups of cooperatives with the highest and lowest membership fees. This may be due to the fact that the average membership fee is relatively small (see table \ref{table:E1_summary}). 
 
 \singlespacing
 % Summary Stats Table
@@ -345,241 +354,155 @@ The outcomes of interest in this study are defined as follows: the revenue recei
   \scalebox{.65}{
   \begin{tabularx}{1.5\linewidth}{lllll}
 \hline \noalign{\smallskip}Group Definition (split at median) & Cooperative goat & Cooperative goats & Cooperative loan & Cooperative benefits\\
- & revenue (USD) & sold (count) & amount (USD) & index\\
+ & revenue (USD) & sold (count) & amount (USD) & index (st. deviations)\\
  \noalign{\smallskip}\hline \\
-  & (N= ) & (N= ) & (N= ) & (N= ) \\
+  & (N=1,384) & (N=1,384) & (N=1,572) & (N=816) \\
 \textbf{Extensive Inclusion} & & & & \\ 
-\noalign{\smallskip}Proportion of nonliterate members & -10.38 & -0.13** & -59.81 & -0.21***\\
- & \begin{footnotesize}(6.87)\end{footnotesize} & \begin{footnotesize}(0.06)\end{footnotesize} & \begin{footnotesize}(40.75)\end{footnotesize} & \begin{footnotesize}(0.07)\end{footnotesize}\\
-\noalign{\smallskip}Proportion of members below the median number of goats owned & -47.99*** & -0.47*** & 20.68 & -0.24***\\
- & \begin{footnotesize}(6.72)\end{footnotesize} & \begin{footnotesize}(0.06)\end{footnotesize} & \begin{footnotesize}(40.70)\end{footnotesize} & \begin{footnotesize}(0.07)\end{footnotesize}\\
+\noalign{\smallskip}Proportion of non-literate members & -9.72 & -0.12 & -74.29 & -0.20**\\
+ & \begin{footnotesize}(12.89)\end{footnotesize} & \begin{footnotesize}(0.12)\end{footnotesize} & \begin{footnotesize}(59.32)\end{footnotesize} & \begin{footnotesize}(0.10)\end{footnotesize}\\
+\noalign{\smallskip}Proportion of members below the median number of goats owned & -47.99*** & -0.47*** & 20.68 & -0.24**\\
+ & \begin{footnotesize}(11.03)\end{footnotesize} & \begin{footnotesize}(0.11)\end{footnotesize} & \begin{footnotesize}(63.26)\end{footnotesize} & \begin{footnotesize}(0.10)\end{footnotesize}\\
 \noalign{\smallskip}Coefficient of variation on members' goats & -1.04 & -0.04 & 39.84 & -0.05\\
- & \begin{footnotesize}(6.78)\end{footnotesize} & \begin{footnotesize}(0.06)\end{footnotesize} & \begin{footnotesize}(40.69)\end{footnotesize} & \begin{footnotesize}(0.07)\end{footnotesize}\\
-\noalign{\smallskip}Size of membership fee & 9.40 & 0.08 & -59.76 & -0.02\\
- & \begin{footnotesize}(6.79)\end{footnotesize} & \begin{footnotesize}(0.06)\end{footnotesize} & \begin{footnotesize}(40.79)\end{footnotesize} & \begin{footnotesize}(0.07)\end{footnotesize}\\ \\
+ & \begin{footnotesize}(13.07)\end{footnotesize} & \begin{footnotesize}(0.13)\end{footnotesize} & \begin{footnotesize}(62.34)\end{footnotesize} & \begin{footnotesize}(0.11)\end{footnotesize}\\
+\noalign{\smallskip}Size of membership fee & 4.14 & 0.01 & -50.82 & 0.00\\
+ & \begin{footnotesize}(13.15)\end{footnotesize} & \begin{footnotesize}(0.13)\end{footnotesize} & \begin{footnotesize}(61.71)\end{footnotesize} & \begin{footnotesize}(0.11)\end{footnotesize}\\
+\noalign{\smallskip}Extensive inclusion index & -41.58*** & -0.39*** & 62.78 & -0.16\\
+ & \begin{footnotesize}(11.52)\end{footnotesize} & \begin{footnotesize}(0.11)\end{footnotesize} & \begin{footnotesize}(62.04)\end{footnotesize} & \begin{footnotesize}(0.11)\end{footnotesize}\\ \\
+
 
 \textbf{Intensive Inclusion} & & & & \\
 \noalign{\smallskip}Proportion of members receiving sale information & 63.97*** & 0.64*** & 20.95 & 0.41***\\
- & \begin{footnotesize}(7.33)\end{footnotesize} & \begin{footnotesize}(0.06)\end{footnotesize} & \begin{footnotesize}(45.21)\end{footnotesize} & \begin{footnotesize}(0.08)\end{footnotesize}\\
-\noalign{\smallskip}Proportion of members receiving non-sale information & 19.61*** & 0.19*** & 12.86 & 0.13*\\
- & \begin{footnotesize}(6.76)\end{footnotesize} & \begin{footnotesize}(0.06)\end{footnotesize} & \begin{footnotesize}(40.69)\end{footnotesize} & \begin{footnotesize}(0.07)\end{footnotesize}\\
-\noalign{\smallskip}Proportion of members receiving loans & 30.02*** & 0.31*** & 152.61*** & 0.30***\\
- & \begin{footnotesize}(6.75)\end{footnotesize} & \begin{footnotesize}(0.06)\end{footnotesize} & \begin{footnotesize}(40.93)\end{footnotesize} & \begin{footnotesize}(0.07)\end{footnotesize}\\
-\noalign{\smallskip}Proportion of members who voted in cooperative elections & 11.89* & 0.06 & -26.80 & -0.04\\
- & \begin{footnotesize}(6.91)\end{footnotesize} & \begin{footnotesize}(0.06)\end{footnotesize} & \begin{footnotesize}(40.83)\end{footnotesize} & \begin{footnotesize}(0.07)\end{footnotesize}\\
+ & \begin{footnotesize}(12.95)\end{footnotesize} & \begin{footnotesize}(0.13)\end{footnotesize} & \begin{footnotesize}(71.39)\end{footnotesize} & \begin{footnotesize}(0.11)\end{footnotesize}\\
+\noalign{\smallskip}Proportion of members receiving non-sale information & 19.61 & 0.19 & 12.86 & 0.13\\
+ & \begin{footnotesize}(13.17)\end{footnotesize} & \begin{footnotesize}(0.13)\end{footnotesize} & \begin{footnotesize}(62.97)\end{footnotesize} & \begin{footnotesize}(0.11)\end{footnotesize}\\
+\noalign{\smallskip}Proportion of members receiving loans & 30.02** & 0.31** & 152.61*** & 0.30***\\
+ & \begin{footnotesize}(13.06)\end{footnotesize} & \begin{footnotesize}(0.13)\end{footnotesize} & \begin{footnotesize}(54.34)\end{footnotesize} & \begin{footnotesize}(0.10)\end{footnotesize}\\
+\noalign{\smallskip}Proportion of members that voted in cooperative elections & 11.89 & 0.06 & -26.80 & -0.04\\
+ & \begin{footnotesize}(13.26)\end{footnotesize} & \begin{footnotesize}(0.12)\end{footnotesize} & \begin{footnotesize}(62.70)\end{footnotesize} & \begin{footnotesize}(0.11)\end{footnotesize}\\
+\noalign{\smallskip}Intensive inclusion index & 33.85*** & 0.33*** & 86.22 & 0.33***\\
+ & \begin{footnotesize}(11.87)\end{footnotesize} & \begin{footnotesize}(0.11)\end{footnotesize} & \begin{footnotesize}(54.35)\end{footnotesize} & \begin{footnotesize}(0.09)\end{footnotesize}\\
 \noalign{\smallskip}\hline
 \multicolumn{5}{@{}p{1.5\linewidth}}
-{\textit{Notes}: Results from a simple linear regression of the binary group identifier on the outcome of interest. Standard errors in parentheses (*** p$<$0.01, ** p$<$0.05, * p$<$0.1). }
+{\textit{Notes}: Results from a simple linear regression of the binary group identifier on the outcome of interest. Clustered standard errors in parentheses (*** p$<$0.01, ** p$<$0.05, * p$<$0.1). }
   \end{tabularx}}
 \end{table}
 \doublespacing
-
-%CM: I think you need cluster standard errors here. Not clear if you used them.
-Table (\ref{table:E1_gap}) displays the average performance gap between the most and least inclusive cooperatives across each of the eight group splits and outcomes described above. The first panel indicates that across two of the four extensive dimensions, cooperatives that broadly include people in their membership perform significantly worse than their less inclusive counterparts. Among the cooperatives whose proportion of nonliterate members is above the sample median, members sell significantly fewer goats through the cooperative and receive a significantly lower score on the cooperative benefits index. Similarly, among cooperatives whose proportion of low asset holding members is higher than the median value, members sell fewer goats through the cooperative, receive less revenue from goat sales and score significantly lower on the overall benefits index, on average. Interestingly, there are no significant differences between the most and least inclusive cooperatives when split at the median value of the coefficient of variation on the number of goats owned. This may imply that the overall variation of members' assets is less important than the proportion of members with very few assets. Similarly, there is no significant performance gap between the groups of cooperatives with the highest and lowest membership fees. This may be due to the fact that the average membership fee is relatively small (see table \ref{table:E1_summary}). 
 
 The second panel in table (\ref{table:E1_gap}) indicates that across all four intensive dimensions, cooperatives that include a larger proportion of their members in group activities perform significantly better than their less inclusive counterparts. In cooperatives that communicate sale and non-sale information to a larger proportion of their members, the average member sells more goats through the cooperative, receives more revenue from goat sales, and scores significantly higher on the overall benefits index. In cooperatives where a larger proportion of members have loans outstanding, the average member receives larger benefits across all four outcomes. The performance gap between cooperatives in which a larger proportion of members vote in elections is more mixed, with only the gap in revenue from cooperative goat sales being significantly different than zero. 
 
 
 \subsection{Decomposing Performance Gaps}
 
-In this subsection, I decompose the performance gaps described above into the portion that is explained by differences in observable characteristics and the portion that is explained by the returns to those characteristics. Following the approach outlined in section (\ref{sec:E1_est}), I report the separate components of equation (\ref{eq:E1_6a})-(\ref{eq:E1_6c}) across each outcome of interest, using all eight group specifications outlined above. See section \ref{sec:OLS_append} of the appendix for the results of the underlying OLS regressions used to generate each set of results, including the full list of covariates.
+In this subsection, I decompose the performance gaps described above into the portion that is explained by differences in observable characteristics and the portion that is explained by the returns to those characteristics. Following the approach outlined in section \ref{sec:E1_est}, I report the separate components of equation (\ref{eq:E1_6a})-(\ref{eq:E1_6c}) across each outcome of interest, using all eight group specifications outlined above. See section \ref{sec:OLS_append} of the appendix for the results of the underlying OLS regressions used to generate each set of results, including the full list of covariates.
 
-Tables (\ref{table:E1_decomp_1})-(\ref{table:E1_decomp_4}) display the decomposition results for each outcome of interest. The first panel of each table displays results across the four dimensions of extensive inclusion, while the second panel displays results across the four dimensions of intensive inclusion. Column one displays the estimated performance gap between the most and least inclusive cooperatives across each group definition, column two displays the portion of that gap that is explained by observable characteristics and column three displays the portion of that gap that is explained by the returns to those characteristics. 
+Figures (\ref{figure:decomp_1})-(\ref{figure:decomp_4}) display the decomposition results for each outcome of interest. The left sub-figure for each outcome displays results across the four dimensions of extensive inclusion, while the right sub-figure displays results across the four dimensions of intensive inclusion. Each figure displays the estimated performance gap between the most and least inclusive cooperatives across each group definition, the portion of that gap that is explained by observable characteristics and the portion of that gap that is explained by the returns to those characteristics. 
 
-\singlespacing
-% Summary Stats Table
-\newcolumntype{Y}{>{\centering\arraybackslash}X}
-\begin{table}[H]
-  \centering
-  \caption{Decomposition results for revenue from cooperative goat sales}
-  \label{table:E1_decomp_1}
-  \scalebox{.8}{
-  \begin{tabularx}{1.1\linewidth}{lccc}
-\hline \noalign{\smallskip}Revenue from cooperative goat sales (USD) & Difference & Characteristics & Returns \\
-\noalign{\smallskip}\hline \noalign{\smallskip}
-\textbf{Extensive Inclusion} & & & \\ 
-Proportion of nonliterate members & -4.06 & -11.53 & 7.47\\
- & \begin{footnotesize}(13.11)\end{footnotesize} & \begin{footnotesize}(14.44)\end{footnotesize} & \begin{footnotesize}(13.40)\end{footnotesize}\\
-\noalign{\smallskip}Proportion of members below the median number of goats owned & -50.15*** & 9.45 & -59.60***\\
- & \begin{footnotesize}(11.07)\end{footnotesize} & \begin{footnotesize}(16.48)\end{footnotesize} & \begin{footnotesize}(13.61)\end{footnotesize}\\
-\noalign{\smallskip}Coefficient of variation on members' goats & -2.38 & -0.80 & -1.57\\
- & \begin{footnotesize}(13.25)\end{footnotesize} & \begin{footnotesize}(13.68)\end{footnotesize} & \begin{footnotesize}(11.92)\end{footnotesize}\\
-\noalign{\smallskip}Size of membership fee & 12.03 & -17.64 & 29.68**\\
- & \begin{footnotesize}(12.32)\end{footnotesize} & \begin{footnotesize}(13.08)\end{footnotesize} & \begin{footnotesize}(14.17)\end{footnotesize}\\
-
- 
- \textbf{Intensive Inclusion} & & & \\
-\noalign{\smallskip}Proportion of members receiving sale information & 60.70*** & 0.24 & 60.46***\\
- & \begin{footnotesize}(13.19)\end{footnotesize} & \begin{footnotesize}(12.61)\end{footnotesize} & \begin{footnotesize}(14.59)\end{footnotesize}\\
-\noalign{\smallskip}Proportion of members receiving non-sale information & 14.29 & -0.09 & 14.38\\
- & \begin{footnotesize}(12.63)\end{footnotesize} & \begin{footnotesize}(25.78)\end{footnotesize} & \begin{footnotesize}(26.10)\end{footnotesize}\\
-\noalign{\smallskip}Proportion of members receiving loans & 29.21** & 17.39 & 11.81\\
- & \begin{footnotesize}(12.54)\end{footnotesize} & \begin{footnotesize}(14.04)\end{footnotesize} & \begin{footnotesize}(13.97)\end{footnotesize}\\
-\noalign{\smallskip}Proportion of members who voted in cooperative elections & 9.11 & 40.23** & -31.12*\\
- & \begin{footnotesize}(13.51)\end{footnotesize} & \begin{footnotesize}(16.76)\end{footnotesize} & \begin{footnotesize}(16.92)\end{footnotesize}\\
- \noalign{\smallskip}\hline
-  \end{tabularx}}
-\end{table}
-\doublespacing
-
-\begin{figure}[H]
-\caption{Decomposition results for revenue from cooperative goat sales}
+\vspace{.5cm}
+\begin{figure}[H] 
+\caption{Decomposition results for revenue from cooperative goat sales} \label{figure:decomp_1}
     \centering
-    \begin{subfigure}[t]{.49\textwidth}
+    \begin{subfigure}[t]{.475\textwidth}
     \centering
-        \caption{Extensive inclusion} \label{figure:E2_PD_Annual}
+        \caption{Extensive inclusion} \label{figure:decomp_1_ex}
         \includegraphics[width=\linewidth,trim=4 4 4 4,clip]{decomp_1_ex.png} 
     \end{subfigure}
     \vspace{.1cm}
-    \begin{subfigure}[t]{0.49\textwidth}
+    \begin{subfigure}[t]{0.47\textwidth}
         \centering
-        \caption{Intensive inclusion} \label{figure:E2_PD_Festival}
+        \caption{Intensive inclusion} \label{figure:decomp_1_in}
         \includegraphics[width=\linewidth,trim=4 4 4 4,clip]{decomp_1_in.png} 
     \end{subfigure}
 \end{figure}
 
-Table (\ref{table:E1_decomp_1}) displays the results for the revenue from cooperative goat sales. In terms of extensive inclusion, cooperatives that include a larger proportion of low goat owning members perform significantly worse than their less inclusive counterparts. On average, members in the most inclusive cooperatives (measured by the proportion of members who own below the median number of goats) earn \$50 (USD) less in goat revenue than those in the least inclusive group. This results is largely not explained by differences in observable characteristics between the two groups, but appears to be driven by the returns to these characteristics. This result implies that the two groups are similar in terms of their observed characteristics, but the least (extensively) inclusive cooperatives appear to be better able to translate their characteristics into performance. This result is largely consistent with the inclusive-performance tradeoff highlighted in previous studies. 
+Figure (\ref{figure:decomp_1}) displays the results for the revenue from cooperative goat sales. In terms of extensive inclusion, cooperatives that include a larger proportion of low goat owning members perform significantly worse than their less inclusive counterparts. On average, members in the most inclusive cooperatives (measured by the proportion of members who own below the median number of goats) earn \$50 (USD) less in goat revenue than those in the least inclusive group. This results is largely not explained by differences in observable characteristics between the two groups, but appears to be driven by the returns to these characteristics. This result implies that the two groups are similar in terms of their observed characteristics, but the least (extensively) inclusive cooperatives appear to be better able to translate their characteristics into performance. This result is largely consistent with the inclusive-performance tradeoff highlighted in previous studies. 
 
-The second panel of table (\ref{table:E1_decomp_1}) indicates that, in terms of intensive inclusion, cooperatives that include a larger proportion of their members in group activities perform significantly better than their less inclusive counterparts. In cooperatives that provide sale information to a larger proportion of their members, the average member earns \$60.70 (USD) more in goat revenue. This result is also not explained by differences in observable characteristics, but rather the returns to those characteristics. While cooperatives that provide loans to a larger proportion of their members also perform significantly better than their less inclusive counterparts, this result appears to be somewhat equally explained by differences in characteristics and returns. While neither component is statistically significant, both are positive and make up a sizable portion of the overall performance gap. Finally, the results for the proportion of members who voted in cooperative elections has an interesting interpretation. While the overall performance gap is not significantly different than zero, the components of that make up this gap are both significant with opposite signs. The observable characteristics of the most inclusive cooperatives would suggest that they should perform significantly better than the less inclusive cooperatives, however, these organizations have significantly lower returns to those characteristics. This may suggest that the most democratic cooperatives are well positioned to achieve market performance, but are not capitalizing on this opportunity. Overall, the second panel of results suggests that most (intensively) inclusive cooperatives appear to be better able to translate their characteristics into performance.  
+The results displayed in figure (\ref{figure:decomp_1_in}) indicate that, in terms of intensive inclusion, cooperatives that include a larger proportion of their members in group activities perform significantly better than their less inclusive counterparts. In cooperatives that provide sale information to a larger proportion of their members, the average member earns \$60.70 (USD) more in goat revenue. This result is also not explained by differences in observable characteristics, but rather the returns to those characteristics. While cooperatives that provide loans to a larger proportion of their members also perform significantly better than their less inclusive counterparts, this result appears to be somewhat equally explained by differences in characteristics and returns. While neither component is statistically significant, both are positive and make up a sizable portion of the overall performance gap. Finally, the results for the proportion of members who voted in cooperative elections has an interesting interpretation. While the overall performance gap is not significantly different than zero, the components of that make up this gap are both significant with opposite signs. The observable characteristics of the most inclusive cooperatives would suggest that they should perform significantly better than the less inclusive cooperatives, however, these organizations have significantly lower returns to those characteristics. This may suggest that the most democratic cooperatives are well positioned to achieve market performance, but are not capitalizing on this opportunity. Overall, the second panel of results suggests that most (intensively) inclusive cooperatives appear to be better able to translate their characteristics into performance.  
 
-\singlespacing
-% Summary Stats Table
-\newcolumntype{Y}{>{\centering\arraybackslash}X}
-\begin{table}[H]
-  \centering
-  \caption{Decomposition results for the number of goats sold through the cooperative}
-  \label{table:E1_decomp_2}
-  \scalebox{.8}{
-  \begin{tabularx}{1.1\linewidth}{lccc}
-\hline \noalign{\smallskip}Number of goats sold through the cooperative (count) & Difference & Characteristics & Returns \\
-\noalign{\smallskip}\hline \noalign{\smallskip}
-\textbf{Extensive Inclusion} & & & \\ 
-Proportion of nonliterate members & -0.07 & -0.06 & -0.01\\
- & \begin{footnotesize}(0.12)\end{footnotesize} & \begin{footnotesize}(0.14)\end{footnotesize} & \begin{footnotesize}(0.12)\end{footnotesize}\\
-\noalign{\smallskip}Proportion of members below the median number of goats owned & -0.49*** & 0.12 & -0.61***\\
- & \begin{footnotesize}(0.11)\end{footnotesize} & \begin{footnotesize}(0.16)\end{footnotesize} & \begin{footnotesize}(0.13)\end{footnotesize}\\
-\noalign{\smallskip}Coefficient of variation on members' goats & -0.05 & -0.00 & -0.05\\
- & \begin{footnotesize}(0.13)\end{footnotesize} & \begin{footnotesize}(0.14)\end{footnotesize} & \begin{footnotesize}(0.12)\end{footnotesize}\\
-\noalign{\smallskip}Size of membership fee & 0.10 & -0.19 & 0.29**\\
- & \begin{footnotesize}(0.12)\end{footnotesize} & \begin{footnotesize}(0.13)\end{footnotesize} & \begin{footnotesize}(0.14)\end{footnotesize}\\
- 
- \textbf{Intensive Inclusion} & & & \\
-\noalign{\smallskip}Proportion of members receiving sale information & 0.62*** & 0.01 & 0.61***\\
- & \begin{footnotesize}(0.13)\end{footnotesize} & \begin{footnotesize}(0.10)\end{footnotesize} & \begin{footnotesize}(0.14)\end{footnotesize}\\
-\noalign{\smallskip}Proportion of members receiving non-sale information & 0.15 & 0.08 & 0.07\\
- & \begin{footnotesize}(0.12)\end{footnotesize} & \begin{footnotesize}(0.23)\end{footnotesize} & \begin{footnotesize}(0.25)\end{footnotesize}\\
-\noalign{\smallskip}Proportion of members receiving loans & 0.31** & 0.07 & 0.24*\\
- & \begin{footnotesize}(0.12)\end{footnotesize} & \begin{footnotesize}(0.12)\end{footnotesize} & \begin{footnotesize}(0.12)\end{footnotesize}\\
-\noalign{\smallskip}Proportion of members who voted in cooperative elections & 0.02 & 0.41** & -0.39**\\
- & \begin{footnotesize}(0.13)\end{footnotesize} & \begin{footnotesize}(0.16)\end{footnotesize} & \begin{footnotesize}(0.15)\end{footnotesize}\\
-\noalign{\smallskip}\hline
-  \end{tabularx}}
-\end{table}
-\doublespacing
+\vspace{.5cm}
+\begin{figure}[H] 
+\caption{Decomposition results for the number of goats sold through the cooperative} \label{figure:decomp_2}
+    \centering
+    \begin{subfigure}[t]{.48\textwidth}
+    \centering
+        \caption{Extensive inclusion} \label{figure:decomp_2_ex}
+        \includegraphics[width=\linewidth,trim=4 4 4 4,clip]{decomp_2_ex.png} 
+    \end{subfigure}
+    \vspace{.1cm}
+    \begin{subfigure}[t]{0.47\textwidth}
+        \centering
+        \caption{Intensive inclusion} \label{figure:decomp_2_in}
+        \includegraphics[width=\linewidth,trim=4 4 4 4,clip]{decomp_2_in.png} 
+    \end{subfigure}
+\end{figure}
 
-The results displayed in table (\ref{table:E1_decomp_2}) show a similar pattern for the number of goats sold through the cooperative. Extensive inclusion is associated with fewer goats sold per member, while intensive inclusion is associated with more goats sold per member. In particular, cooperatives that include a larger proportion of low asset holding members perform significantly worse than cooperatives that are less inclusive in this aspect. Conversely, cooperatives in which a larger proportion of members receive sale information and have outstanding loans from the cooperative perform significantly better than the least inclusive group across these dimensions. All three of these results are driven by returns rather than differences in observable characteristics between groups. Similar to table (\ref{table:E1_decomp_1}), cooperatives in which a larger proportion of members vote in elections have more favorable characteristics but almost equally unfavorable returns to those characteristics. 
+The results displayed in figure (\ref{figure:decomp_2}) show a similar pattern for the number of goats sold through the cooperative. Extensive inclusion is associated with fewer goats sold per member, while intensive inclusion is associated with more goats sold per member. In particular, cooperatives that include a larger proportion of low asset holding members perform significantly worse than cooperatives that are less inclusive in this aspect. Conversely, cooperatives in which a larger proportion of members receive sale information and have outstanding loans from the cooperative perform significantly better than the least inclusive group across these dimensions. All three of these results are driven by returns rather than differences in observable characteristics between groups. Similar to figure (\ref{figure:decomp_1}), cooperatives in which a larger proportion of members vote in elections have more favorable characteristics but almost equally unfavorable returns to those characteristics. 
 
+\vspace{.5cm}
+\begin{figure}[H] 
+\caption{Decomposition results for the cooperative loan amount} \label{figure:decomp_3}
+    \centering
+    \begin{subfigure}[t]{.485\textwidth}
+    \centering
+        \caption{Extensive inclusion} \label{figure:decomp_3_ex}
+        \includegraphics[width=\linewidth,trim=4 4 4 4,clip]{decomp_3_ex.png} 
+    \end{subfigure}
+    \vspace{.1cm}
+    \begin{subfigure}[t]{0.475\textwidth}
+        \centering
+        \caption{Intensive inclusion} \label{figure:decomp_3_in}
+        \includegraphics[width=\linewidth,trim=4 4 4 4,clip]{decomp_3_in.png} 
+    \end{subfigure}
+\end{figure}
 
-\singlespacing
-% Summary Stats Table
-\newcolumntype{Y}{>{\centering\arraybackslash}X}
-\begin{table}[H]
-  \centering
-  \caption{Decomposition results for the cooperative loan amount}
-  \label{table:E1_decomp_3}
-  \scalebox{.8}{
-  \begin{tabularx}{1.1\linewidth}{lccc}
-\hline \noalign{\smallskip}Cooperative loan amount (USD) & Difference & Characteristics & Returns \\
-\noalign{\smallskip}\hline \noalign{\smallskip}
-\textbf{Extensive Inclusion} & & & \\ 
-Proportion of nonliterate members & -74.79 & 136.90 & -211.69**\\
- & \begin{footnotesize}(58.48)\end{footnotesize} & \begin{footnotesize}(88.15)\end{footnotesize} & \begin{footnotesize}(101.38)\end{footnotesize}\\
-\noalign{\smallskip}Proportion of members below the median number of goats owned & 37.78 & 65.53 & -27.75\\
- & \begin{footnotesize}(66.40)\end{footnotesize} & \begin{footnotesize}(51.81)\end{footnotesize} & \begin{footnotesize}(73.79)\end{footnotesize}\\
-\noalign{\smallskip}Coefficient of variation on members' goats & 42.49 & 30.98 & 11.52\\
- & \begin{footnotesize}(64.91)\end{footnotesize} & \begin{footnotesize}(46.66)\end{footnotesize} & \begin{footnotesize}(72.87)\end{footnotesize}\\
-\noalign{\smallskip}Size of membership fee & -59.04 & -36.51 & -22.53\\
- & \begin{footnotesize}(64.21)\end{footnotesize} & \begin{footnotesize}(79.97)\end{footnotesize} & \begin{footnotesize}(95.26)\end{footnotesize}\\
- 
- \textbf{Intensive Inclusion} & & & \\
-\noalign{\smallskip}Proportion of members receiving sale information & 22.60 & 179.02** & -156.42**\\
- & \begin{footnotesize}(77.19)\end{footnotesize} & \begin{footnotesize}(87.21)\end{footnotesize} & \begin{footnotesize}(77.91)\end{footnotesize}\\
-\noalign{\smallskip}Proportion of members receiving non-sale information & -5.79 & -30.30 & 24.51\\
- & \begin{footnotesize}(66.86)\end{footnotesize} & \begin{footnotesize}(96.34)\end{footnotesize} & \begin{footnotesize}(95.62)\end{footnotesize}\\
-\noalign{\smallskip}Proportion of members receiving loans & 143.19** & -7.59 & 150.78**\\
- & \begin{footnotesize}(59.86)\end{footnotesize} & \begin{footnotesize}(54.89)\end{footnotesize} & \begin{footnotesize}(75.06)\end{footnotesize}\\
-\noalign{\smallskip}Proportion of members who voted in cooperative elections & -21.68 & -148.38 & 126.70\\
- & \begin{footnotesize}(64.73)\end{footnotesize} & \begin{footnotesize}(134.29)\end{footnotesize} & \begin{footnotesize}(125.98)\end{footnotesize}\\
-\noalign{\smallskip}\hline
-  \end{tabularx}}
-\end{table}
-\doublespacing
+Figure (\ref{figure:decomp_3}) displays the results for the value of outstanding cooperative loans. In the first panel, none of the performance gaps are significantly different than zero in terms of extensive inclusion. However, cooperatives that include a larger share of nonliterate households in their membership have significantly lower returns to their characteristics than less inclusive cooperatives. Interestingly, these cooperatives seem to have more favorable characteristics (although the coefficient on characteristics is insignificant), balancing out the effect on the overall performance gap. In figure (\ref{figure:decomp_3_in}), there is a similar pattern for cooperatives that provide sale information to a larger proportion of their members. These cooperatives have significantly more favorable characteristics, implying that they should be positioned to provide a larger value of loans to their members. However, these cooperatives receive significantly lower returns than their less inclusive counterparts, erasing most of the overall performance gap. When splitting cooperatives by the proportion of members that have an outstanding cooperative loan, the most inclusive cooperatives perform significantly better than their less inclusive counterparts. This result appears to be almost entirely driven by the returns to individual and institutional characteristics. 
 
-Table (\ref{table:E1_decomp_3}) displays the results for the value of outstanding cooperative loans. In the first panel, none of the performance gaps are significantly different than zero in terms of extensive inclusion. However, cooperatives that include a larger share of nonliterate households in their membership have significantly lower returns to their characteristics than less inclusive cooperatives. Interestingly, these cooperatives seem to have more favorable characteristics (although the coefficient on characteristics is insignificant), balancing out the effect on the overall performance gap. In the second panel, there is a similar pattern for cooperatives that provide sale information to a larger proportion of their members. These cooperatives have significantly more favorable characteristics, implying that they should be positioned to provide a larger value of loans to their members. However, these cooperatives receive significantly lower returns than their less inclusive counterparts, erasing most of the overall performance gap. When splitting cooperatives by the proportion of members that have an outstanding cooperative loan, the most inclusive cooperatives perform significantly better than their less inclusive counterparts. This result appears to be almost entirely driven by the returns to individual and institutional characteristics. 
+\vspace{.5cm}
+\begin{figure}[H] 
+\caption{Decomposition results for the cooperative benefits index} \label{figure:decomp_4}
+    \centering
+    \begin{subfigure}[t]{.48\textwidth}
+    \centering
+        \caption{Extensive inclusion} \label{figure:decomp_4_ex}
+        \includegraphics[width=\linewidth,trim=4 4 4 4,clip]{decomp_4_ex.png} 
+    \end{subfigure}
+    \vspace{.1cm}
+    \begin{subfigure}[t]{0.475\textwidth}
+        \centering
+        \caption{Intensive inclusion} \label{figure:decomp_4_in}
+        \includegraphics[width=\linewidth,trim=4 4 4 4,clip]{decomp_4_in.png} 
+    \end{subfigure}
+\end{figure}
 
-\singlespacing
-% Summary Stats Table
-\newcolumntype{Y}{>{\centering\arraybackslash}X}
-\begin{table}[H]
-  \centering
-  \caption{Decomposition results for the cooperative benefits index}
-  \label{table:E1_decomp_4}
-  \scalebox{.8}{
-  \begin{tabularx}{1.1\linewidth}{lccc}
-\hline \noalign{\smallskip}Benefits Index & Difference & Characteristics & Returns \\
-\noalign{\smallskip}\hline \noalign{\smallskip}
-\textbf{Extensive Inclusion} & & & \\ 
-\noalign{\smallskip}Proportion of nonliterate members & -0.22** & -0.05 & -0.17\\
- & \begin{footnotesize}(0.10)\end{footnotesize} & \begin{footnotesize}(0.20)\end{footnotesize} & \begin{footnotesize}(0.18)\end{footnotesize}\\
-\noalign{\smallskip}Proportion of members below the median number of goats owned & -0.22** & 0.01 & -0.24*\\
- & \begin{footnotesize}(0.11)\end{footnotesize} & \begin{footnotesize}(0.14)\end{footnotesize} & \begin{footnotesize}(0.13)\end{footnotesize}\\
-\noalign{\smallskip}Coefficient of variation on members' goats & -0.06 & -0.03 & -0.03\\
- & \begin{footnotesize}(0.11)\end{footnotesize} & \begin{footnotesize}(0.13)\end{footnotesize} & \begin{footnotesize}(0.12)\end{footnotesize}\\
-\noalign{\smallskip}Size of membership fee & 0.01 & -0.16 & 0.17\\
- & \begin{footnotesize}(0.11)\end{footnotesize} & \begin{footnotesize}(0.11)\end{footnotesize} & \begin{footnotesize}(0.13)\end{footnotesize}\\
- 
- \textbf{Intensive Inclusion} & & & \\
-\noalign{\smallskip}Proportion of members receiving sale information & 0.44*** & -0.03 & 0.47**\\
- & \begin{footnotesize}(0.11)\end{footnotesize} & \begin{footnotesize}(0.16)\end{footnotesize} & \begin{footnotesize}(0.19)\end{footnotesize}\\
-\noalign{\smallskip}Proportion of members receiving non-sale information & 0.11 & 0.05 & 0.06\\
- & \begin{footnotesize}(0.11)\end{footnotesize} & \begin{footnotesize}(0.23)\end{footnotesize} & \begin{footnotesize}(0.24)\end{footnotesize}\\
-\noalign{\smallskip}Proportion of members receiving loans & 0.31*** & 0.09 & 0.22\\
- & \begin{footnotesize}(0.10)\end{footnotesize} & \begin{footnotesize}(0.12)\end{footnotesize} & \begin{footnotesize}(0.14)\end{footnotesize}\\
-\noalign{\smallskip}Proportion of members who voted in cooperative elections & -0.04 & -0.12 & 0.08\\
- & \begin{footnotesize}(0.11)\end{footnotesize} & \begin{footnotesize}(0.20)\end{footnotesize} & \begin{footnotesize}(0.18)\end{footnotesize}\\
-\noalign{\smallskip}\hline
-  \end{tabularx}}
-\end{table}
-\doublespacing
-
-Finally, table (\ref{table:E1_decomp_4}) displays the decomposition results for the cooperative benefits index. The first panel shows that, in terms of extensive inclusion, the most inclusive cooperatives perform significantly worse than their less inclusive counterparts. Members of cooperatives that include a larger proportion of nonliterate members and those that include a larger share of low asset holding members receive a significantly lower average score on the cooperative benefits index, both results appear to be largely driven by the returns to their respective characteristics. The second panel indicates that the most intensively inclusive cooperatives perform significantly better than their less inclusive counterparts. When splitting cooperatives by the proportion of members that receive sale information as well as the proportion of members who have a cooperative loan outstanding, members of the most inclusive cooperatives receive significantly higher scores on the overall benefits index. Similarly, these results appear to be mostly driven by returns to individual and institutional characteristics. 
+Finally, figure (\ref{figure:decomp_4}) displays the decomposition results for the cooperative benefits index. Figure (\ref{figure:decomp_4_in}) shows that, in terms of extensive inclusion, the most inclusive cooperatives perform significantly worse than their less inclusive counterparts. Members of cooperatives that include a larger proportion of nonliterate members and those that include a larger share of low asset holding members receive a significantly lower average score on the cooperative benefits index, both results appear to be largely driven by the returns to their respective characteristics. Figure (\ref{figure:decomp_4_in}) indicates that the most intensively inclusive cooperatives perform significantly better than their less inclusive counterparts. When splitting cooperatives by the proportion of members that receive sale information as well as the proportion of members who have a cooperative loan outstanding, members of the most inclusive cooperatives receive significantly higher scores on the overall benefits index. Similarly, these results appear to be mostly driven by returns to individual and institutional characteristics. 
 
 
 %-----------------------------------------------------------------------%
 \section{Discussion}
 
-My results suggest that, across a number of dimensions and outcomes, extensive inclusiveness is (weakly) associated with lower market performance while intensive inclusiveness is (weakly) associated with higher market performance. This study has important limitations that should be taken into account when interpreting these results. The methodology used in this study is based on simple OLS regressions and I do not claim to have a credible identification strategy. The estimates used to decompose cooperative performance gaps likely suffer from ommitted variable bias and therefore should be interpreted as correlations. However, this descriptive analysis provides a useful framework for further investigating the tradeoffs inherent in managing collective action. 
+My results suggest that, across a number of dimensions and outcomes, extensive inclusion is (weakly) associated with lower market performance while intensive inclusion is (weakly) associated with higher market performance. This study has important limitations that should be taken into account when interpreting these results. The methodology used in this study is based on simple OLS regressions and I do not claim to have a credible identification strategy. The estimates used to decompose cooperative performance gaps likely suffer from ommitted variable bias and therefore should be interpreted as correlations. However, this descriptive analysis provides a useful framework for further investigating the tradeoffs inherent in managing collective action. 
 
 With these limitations in mind, my results provide additional evidence of a tradeoff between extensive inclusion and market performance (as highlighted in \citet{bernard_reaching_2009}), while demonstrating that a limited focus on membership criteria as the main source of inclusion overlooks an important aspect of cooperative management. In expanding the definition of inclusive membership to account for the extent to which existing members are included in group activities, my results indicate that intensive inclusion is associated with higher market performance. 
 
 Analyzing the overall performance gap between the most and least inclusive cooperatives across a number of inclusiveness dimensions generates several hypotheses that need further investigation. In terms of extensive inclusion, cooperatives appear to achieve signficantly different levels of market performance based on the proportion of nonliterate and low goat owning households that are currently in their membership. In this context, there does not appear to be a strong relationship between the coefficient of variation on the number of goats owned per member or the size of the cooperative membership fee. One possible explanation for the relationship between goat ownership and market performance is that the existence of members who own little to no goats may meaningfully increase transaction costs without substantially benefiting the cooperative. Conversely, the variation in members' goat ownership also captures the existence of members that own a large quantity of goats. These members may provide enough benefit to the cooperative to outweigh the additional transaction costs of a number of low goat owning members, balancing out the effect. 
 
-In terms of intensive inclusiveness, cooperatives achieve differing levels of market performance based on the proportion of members that receive sale information and the proportion that have an outstanding loan from the cooperative. The results suggest that market performance likely does not differ based on the proportion of members that receive non-sale information or the proportion that vote in cooperative elections. If there is a causal link between intensive inclusion and market performance, it is not clear which direction this mechanism works. While including a larger number of members in a given group activity can improve cooperative performance by pooling a larger quantity of inputs \citep{aflagah_cheap_2019}, the marginal benefit of each additional member included in an activity is also associated with the marginal cost of communicating with and managing a larger group size. It is also possible that this relationship is capturing reverse causality, where the most successful cooperatives have the resources and ability to include a larger number of members in group activities. Further theoretical and empirical research is needed to understand the optimal level of intensive inclusion and its impact on market performance within agricultural cooperatives.
+In terms of intensive inclusion, cooperatives achieve differing levels of market performance based on the proportion of members that receive sale information and the proportion that have an outstanding loan from the cooperative. The results suggest that market performance likely does not differ based on the proportion of members that receive non-sale information or the proportion that vote in cooperative elections. If there is a causal link between intensive inclusion and market performance, it is not clear which direction this mechanism works. While including a larger number of members in a given group activity can improve cooperative performance by pooling a larger quantity of inputs \citep{aflagah_cheap_2019}, the marginal benefit of each additional member included in an activity is also associated with the marginal cost of communicating with and managing a larger group size. It is also possible that this relationship is capturing reverse causality, where the most successful cooperatives have the resources and ability to include a larger number of members in group activities. Further theoretical and empirical research is needed to understand the optimal level of intensive inclusion and its impact on market performance within agricultural cooperatives.
 
-Finally, by decomposing the performance gaps described above, my results demonstrate that the differing levels of performance are largely not explained by observable differences between the most and least inclusive groups. This suggests that inclusive membership (both intensive and extensive) may play an important role in cooperatives' ability to achieve market performance, and that this result is likely not explained by selection bias. %CM: can you explain this conclusion a bit better? In particular the link to selection bias. If observable differences don't explain the gap, then shouldn't unobserved differences (selection bias) explain it?
+Finally, by decomposing the performance gaps described above, my results demonstrate that the differing levels of performance are largely not explained by observable differences between the most and least inclusive groups. This suggests that inclusive membership (both intensive and extensive) may play an important role in cooperatives' ability to achieve market performance, and that this result is likely not explained by observable differences across groups.
 
 
 %-----------------------------------------------------------------------%
 \section{Conclusion}
 
-In this paper, I expand the definition of inclusive membership in agricultural cooperatives and further investigate the inclusive-performance tradeoff. Prior studies have focused on extensive inclusion (the inclusion of a diverse set of households in a cooperative's membership), while largely overlooking intensive inclusion (the extent to which existing members are included in group activities). The cooperative literature has highlighted the inverse relationship between extensive inclusion and market performance \cite{bernard_reaching_2009}. However, I argue that intensive inclusion is an equally important aspect of cooperative management. 
+In this paper, I expand the definition of inclusive membership in agricultural cooperatives and further investigate the inclusive-performance tradeoff. Prior studies have focused on extensive inclusion (the inclusion of a diverse set of households in a cooperative's membership), while largely overlooking intensive inclusion (the extent to which existing members are included in group activities). The cooperative literature has highlighted the inverse relationship between extensive inclusion and market performance \citep{berdegue_cooperating_2001,bernard_reaching_2009,world_bank_world_2008}. However, I argue that intensive inclusion is an equally important aspect of cooperative management. 
 
-My results suggest that extensive inclusion is associated with lower market performance, while intensive inclusion is associated with higher market performance. The former provides evidence of the inclusive-performance tradeoff in a new context: female smallholder livestock cooperatives in Nepal. The latter provides new evidence that contributes to our understanding of the inherent challenges faced by cooperative management.  This paper highlights two opposing relationships that are important to the decision-making process surrounding inclusive cooperative membership. Including a diverse set of households in a cooperative's membership may decrease market performance by increasing transaction costs, but including a large number of existing members in a given activity may improve performance by pooling a larger quantity of inputs. 
+My results suggest that extensive inclusion is associated with lower market performance, while intensive inclusion is associated with higher market performance. First, this study provides evidence of the inclusive-performance tradeoff in a new context: female smallholder livestock cooperatives in Nepal. Second, I provide new evidence that contributes to our understanding of the inherent challenges faced by cooperative management.  This paper highlights two opposing relationships that are important to the decision-making process surrounding inclusive cooperative membership. Including a diverse set of households in a cooperative's membership may decrease market performance by increasing transaction costs, but including a large number of existing members in a given activity may improve performance by pooling a larger quantity of inputs. 
+
+This study attempts to generate new hypotheses that can be tested with additional theoretical and empirical research. While more rigorous evidence is required to understand the optimal level of inclusion for agricultural cooperatives, this paper highlights key aspects of the relationship between inclusive membership and market performance. These results are crucial for understanding the role that agricultural cooperatives play in rural development and poverty alleviation, especially as governments, donors and researchers continue to explore the potential benefits of producer organizations in developing countries. 
 
 
 %------------------------------------------%
 \newpage
-\bibliography {master}
+\bibliography {references}
 %------------------------------------------%
 
 
@@ -597,12 +520,178 @@ My results suggest that extensive inclusion is associated with lower market perf
 
 
 \section{Appendix}
-\subsection{OLS Regressions} \label{sec:OLS_append}
+
+\subsection{Decomposition Results}
+\vspace{-.5cm}
+\singlespacing
+% Summary Stats Table
+\newcolumntype{Y}{>{\centering\arraybackslash}X}
+\begin{table}[H]
+  \centering
+  \caption{Decomposition results for revenue from cooperative goat sales}
+  \label{table:E1_decomp_1}
+  \scalebox{.7}{
+  \begin{tabularx}{1.1\linewidth}{lccc}
+\hline \noalign{\smallskip}Revenue from cooperative goat sales (USD) & Difference & Characteristics & Returns \\
+\noalign{\smallskip}\hline \noalign{\smallskip}
+\textbf{Extensive Inclusion} & & & \\ 
+Percentage of non-literate members & -3.27 & -25.99 & 22.72\\
+ & \begin{footnotesize}(13.08)\end{footnotesize} & \begin{footnotesize}(23.12)\end{footnotesize} & \begin{footnotesize}(20.59)\end{footnotesize}\\
+\noalign{\smallskip}Percentage of members below the median number of goats owned & -50.10*** & 9.56 & -59.66***\\
+ & \begin{footnotesize}(11.07)\end{footnotesize} & \begin{footnotesize}(16.50)\end{footnotesize} & \begin{footnotesize}(13.62)\end{footnotesize}\\
+\noalign{\smallskip}Coefficient of variation on members' goats & -2.29 & -0.85 & -1.44\\
+ & \begin{footnotesize}(13.25)\end{footnotesize} & \begin{footnotesize}(13.68)\end{footnotesize} & \begin{footnotesize}(11.91)\end{footnotesize}\\
+\noalign{\smallskip}Size of membership fee & 1.07 & -31.37** & 32.44**\\
+ & \begin{footnotesize}(12.46)\end{footnotesize} & \begin{footnotesize}(14.52)\end{footnotesize} & \begin{footnotesize}(13.98)\end{footnotesize}\\
+\noalign{\smallskip}Extensive index & -40.78*** & 5.64 & -46.42***\\
+ & \begin{footnotesize}(11.14)\end{footnotesize} & \begin{footnotesize}(16.05)\end{footnotesize} & \begin{footnotesize}(13.64)\end{footnotesize}\\
+
+ 
+ \textbf{Intensive Inclusion} & & & \\
+\noalign{\smallskip}Percentage of members receiving sale information & 60.86*** & 0.17 & 60.69***\\
+ & \begin{footnotesize}(13.12)\end{footnotesize} & \begin{footnotesize}(12.62)\end{footnotesize} & \begin{footnotesize}(14.53)\end{footnotesize}\\
+\noalign{\smallskip}Percentage of members receiving non-sale information & 14.38 & 0.21 & 14.17\\
+ & \begin{footnotesize}(12.63)\end{footnotesize} & \begin{footnotesize}(25.80)\end{footnotesize} & \begin{footnotesize}(26.14)\end{footnotesize}\\
+\noalign{\smallskip}Percentage of members receiving loans & 29.31** & 17.40 & 11.91\\
+ & \begin{footnotesize}(12.54)\end{footnotesize} & \begin{footnotesize}(14.07)\end{footnotesize} & \begin{footnotesize}(14.00)\end{footnotesize}\\
+\noalign{\smallskip}Percentage of members who voted in cooperative elections & 9.22 & 40.39** & -31.17*\\
+ & \begin{footnotesize}(13.49)\end{footnotesize} & \begin{footnotesize}(16.79)\end{footnotesize} & \begin{footnotesize}(16.97)\end{footnotesize}\\
+\noalign{\smallskip}Intensive index & 31.74*** & -6.51 & 38.25***\\
+ & \begin{footnotesize}(11.54)\end{footnotesize} & \begin{footnotesize}(14.49)\end{footnotesize} & \begin{footnotesize}(13.10)\end{footnotesize}\\
+
+ \noalign{\smallskip}\hline
+  \end{tabularx}}
+\end{table}
+\doublespacing
+
+\singlespacing
+% Summary Stats Table
+\newcolumntype{Y}{>{\centering\arraybackslash}X}
+\begin{table}[H]
+  \centering
+  \caption{Decomposition results for the number of goats sold through the cooperative}
+  \label{table:E1_decomp_2}
+  \scalebox{.7}{
+  \begin{tabularx}{1.1\linewidth}{lccc}
+\hline \noalign{\smallskip}Number of goats sold through the cooperative (count) & Difference & Characteristics & Returns \\
+\noalign{\smallskip}\hline \noalign{\smallskip}
+\textbf{Extensive Inclusion} & & & \\ 
+Percentage of non-literate members & -0.06 & -0.15 & 0.08\\
+ & \begin{footnotesize}(0.12)\end{footnotesize} & \begin{footnotesize}(0.22)\end{footnotesize} & \begin{footnotesize}(0.19)\end{footnotesize}\\
+\noalign{\smallskip}Percentage of members below the median number of goats owned & -0.49*** & 0.12 & -0.61***\\
+ & \begin{footnotesize}(0.11)\end{footnotesize} & \begin{footnotesize}(0.16)\end{footnotesize} & \begin{footnotesize}(0.13)\end{footnotesize}\\
+\noalign{\smallskip}Coefficient of variation on members' goats & -0.05 & -0.00 & -0.05\\
+ & \begin{footnotesize}(0.13)\end{footnotesize} & \begin{footnotesize}(0.14)\end{footnotesize} & \begin{footnotesize}(0.12)\end{footnotesize}\\
+\noalign{\smallskip}Size of membership fee & -0.01 & -0.31** & 0.30**\\
+ & \begin{footnotesize}(0.12)\end{footnotesize} & \begin{footnotesize}(0.15)\end{footnotesize} & \begin{footnotesize}(0.14)\end{footnotesize}\\
+\noalign{\smallskip}Extensive index & -0.38*** & 0.05 & -0.43***\\
+ & \begin{footnotesize}(0.11)\end{footnotesize} & \begin{footnotesize}(0.15)\end{footnotesize} & \begin{footnotesize}(0.12)\end{footnotesize}\\
+
+ 
+ \textbf{Intensive Inclusion} & & & \\
+\noalign{\smallskip}Percentage of members receiving sale information & 0.62*** & 0.01 & 0.61***\\
+ & \begin{footnotesize}(0.13)\end{footnotesize} & \begin{footnotesize}(0.10)\end{footnotesize} & \begin{footnotesize}(0.13)\end{footnotesize}\\
+\noalign{\smallskip}Percentage of members receiving non-sale information & 0.15 & 0.08 & 0.07\\
+ & \begin{footnotesize}(0.12)\end{footnotesize} & \begin{footnotesize}(0.23)\end{footnotesize} & \begin{footnotesize}(0.25)\end{footnotesize}\\
+\noalign{\smallskip}Percentage of members receiving loans & 0.31** & 0.07 & 0.24*\\
+ & \begin{footnotesize}(0.12)\end{footnotesize} & \begin{footnotesize}(0.12)\end{footnotesize} & \begin{footnotesize}(0.12)\end{footnotesize}\\
+\noalign{\smallskip}Percentage of members who voted in cooperative elections & 0.03 & 0.41** & -0.39**\\
+ & \begin{footnotesize}(0.13)\end{footnotesize} & \begin{footnotesize}(0.16)\end{footnotesize} & \begin{footnotesize}(0.15)\end{footnotesize}\\
+\noalign{\smallskip}Intensive index & 0.32*** & 0.02 & 0.30**\\
+ & \begin{footnotesize}(0.11)\end{footnotesize} & \begin{footnotesize}(0.12)\end{footnotesize} & \begin{footnotesize}(0.12)\end{footnotesize}\\
+
+\noalign{\smallskip}\hline
+  \end{tabularx}}
+\end{table}
+\doublespacing
+
+\singlespacing
+% Summary Stats Table
+\newcolumntype{Y}{>{\centering\arraybackslash}X}
+\begin{table}[H]
+  \centering
+  \caption{Decomposition results for the cooperative loan amount}
+  \label{table:E1_decomp_3}
+  \scalebox{.7}{
+  \begin{tabularx}{1.1\linewidth}{lccc}
+\hline \noalign{\smallskip}Cooperative loan amount (USD) & Difference & Characteristics & Returns \\
+\noalign{\smallskip}\hline \noalign{\smallskip}
+\textbf{Extensive Inclusion} & & & \\ 
+Percentage of non-literate members & -91.02 & 119.25 & -210.28**\\
+ & \begin{footnotesize}(58.78)\end{footnotesize} & \begin{footnotesize}(91.72)\end{footnotesize} & \begin{footnotesize}(106.55)\end{footnotesize}\\
+\noalign{\smallskip}Percentage of members below the median number of goats owned & 38.18 & 66.79 & -28.61\\
+ & \begin{footnotesize}(66.53)\end{footnotesize} & \begin{footnotesize}(52.03)\end{footnotesize} & \begin{footnotesize}(74.07)\end{footnotesize}\\
+\noalign{\smallskip}Coefficient of variation on members' goats & 42.89 & 31.37 & 11.52\\
+ & \begin{footnotesize}(64.87)\end{footnotesize} & \begin{footnotesize}(46.56)\end{footnotesize} & \begin{footnotesize}(72.88)\end{footnotesize}\\
+\noalign{\smallskip}Size of membership fee & -56.73 & -86.24 & 29.50\\
+ & \begin{footnotesize}(61.85)\end{footnotesize} & \begin{footnotesize}(82.87)\end{footnotesize} & \begin{footnotesize}(88.45)\end{footnotesize}\\
+\noalign{\smallskip}Extensive index & 67.68 & 44.42 & 23.26\\
+ & \begin{footnotesize}(63.97)\end{footnotesize} & \begin{footnotesize}(41.41)\end{footnotesize} & \begin{footnotesize}(74.12)\end{footnotesize}\\
+
+ 
+ \textbf{Intensive Inclusion} & & & \\
+\noalign{\smallskip}Percentage of members receiving sale information & 23.00 & 179.93** & -156.93**\\
+ & \begin{footnotesize}(77.22)\end{footnotesize} & \begin{footnotesize}(87.22)\end{footnotesize} & \begin{footnotesize}(77.98)\end{footnotesize}\\
+\noalign{\smallskip}Percentage of members receiving non-sale information & -5.44 & -30.24 & 24.80\\
+ & \begin{footnotesize}(66.93)\end{footnotesize} & \begin{footnotesize}(96.45)\end{footnotesize} & \begin{footnotesize}(95.73)\end{footnotesize}\\
+\noalign{\smallskip}Percentage of members receiving loans & 143.59** & -7.19 & 150.78**\\
+ & \begin{footnotesize}(59.83)\end{footnotesize} & \begin{footnotesize}(54.95)\end{footnotesize} & \begin{footnotesize}(75.10)\end{footnotesize}\\
+\noalign{\smallskip}Percentage of members who voted in cooperative elections & -21.32 & -147.74 & 126.42\\
+ & \begin{footnotesize}(64.77)\end{footnotesize} & \begin{footnotesize}(134.54)\end{footnotesize} & \begin{footnotesize}(126.22)\end{footnotesize}\\
+\noalign{\smallskip}Intensive index & 84.32 & -20.73 & 105.05\\
+ & \begin{footnotesize}(55.60)\end{footnotesize} & \begin{footnotesize}(51.74)\end{footnotesize} & \begin{footnotesize}(65.49)\end{footnotesize}\\
+\noalign{\smallskip}\hline
+  \end{tabularx}}
+\end{table}
+\doublespacing
+
+\singlespacing
+% Summary Stats Table
+\newcolumntype{Y}{>{\centering\arraybackslash}X}
+\begin{table}[H]
+  \centering
+  \caption{Decomposition results for the cooperative benefits index}
+  \label{table:E1_decomp_4}
+  \scalebox{.7}{
+  \begin{tabularx}{1.1\linewidth}{lccc}
+\hline \noalign{\smallskip}Benefits Index & Difference & Characteristics & Returns \\
+\noalign{\smallskip}\hline \noalign{\smallskip}
+\textbf{Extensive Inclusion} & & & \\ 
+Percentage of non-literate members & -0.21** & -0.08 & -0.13\\
+ & \begin{footnotesize}(0.10)\end{footnotesize} & \begin{footnotesize}(0.15)\end{footnotesize} & \begin{footnotesize}(0.15)\end{footnotesize}\\
+\noalign{\smallskip}Percentage of members below the median number of goats owned & -0.22** & 0.02 & -0.24*\\
+ & \begin{footnotesize}(0.11)\end{footnotesize} & \begin{footnotesize}(0.14)\end{footnotesize} & \begin{footnotesize}(0.13)\end{footnotesize}\\
+\noalign{\smallskip}Coefficient of variation on members' goats & -0.06 & -0.03 & -0.03\\
+ & \begin{footnotesize}(0.11)\end{footnotesize} & \begin{footnotesize}(0.13)\end{footnotesize} & \begin{footnotesize}(0.12)\end{footnotesize}\\
+\noalign{\smallskip}Size of membership fee & -0.01 & -0.31** & 0.30**\\
+ & \begin{footnotesize}(0.11)\end{footnotesize} & \begin{footnotesize}(0.12)\end{footnotesize} & \begin{footnotesize}(0.13)\end{footnotesize}\\
+\noalign{\smallskip}Extensive index & -0.14 & -0.09 & -0.05\\
+ & \begin{footnotesize}(0.11)\end{footnotesize} & \begin{footnotesize}(0.13)\end{footnotesize} & \begin{footnotesize}(0.12)\end{footnotesize}\\
+
+ 
+ \textbf{Intensive Inclusion} & & & \\
+\noalign{\smallskip}Percentage of members receiving sale information & 0.44*** & -0.03 & 0.47**\\
+ & \begin{footnotesize}(0.11)\end{footnotesize} & \begin{footnotesize}(0.16)\end{footnotesize} & \begin{footnotesize}(0.19)\end{footnotesize}\\
+\noalign{\smallskip}Percentage of members receiving non-sale information & 0.11 & 0.06 & 0.05\\
+ & \begin{footnotesize}(0.11)\end{footnotesize} & \begin{footnotesize}(0.24)\end{footnotesize} & \begin{footnotesize}(0.24)\end{footnotesize}\\
+\noalign{\smallskip}Percentage of members receiving loans & 0.31*** & 0.09 & 0.22\\
+ & \begin{footnotesize}(0.10)\end{footnotesize} & \begin{footnotesize}(0.12)\end{footnotesize} & \begin{footnotesize}(0.14)\end{footnotesize}\\
+\noalign{\smallskip}Percentage of members who voted in cooperative elections & -0.04 & -0.12 & 0.08\\
+ & \begin{footnotesize}(0.11)\end{footnotesize} & \begin{footnotesize}(0.20)\end{footnotesize} & \begin{footnotesize}(0.18)\end{footnotesize}\\
+\noalign{\smallskip}Intensive index & 0.33*** & -0.08 & 0.41***\\
+ & \begin{footnotesize}(0.09)\end{footnotesize} & \begin{footnotesize}(0.11)\end{footnotesize} & \begin{footnotesize}(0.12)\end{footnotesize}\\
+\noalign{\smallskip}\hline
+  \end{tabularx}}
+\end{table}
+\doublespacing
+
 
 % OLS: revenue (intensive)
 % -----------------------------------------------
 
 \begin{landscape}
+\subsection{OLS Regressions} \label{sec:OLS_append}
+
 \hspace{2in}
 
 \singlespacing
